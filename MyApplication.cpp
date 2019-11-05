@@ -20,6 +20,7 @@ using namespace std;
 // Located shape must overlap the ground truth by 80% to be considered a match
 #define REQUIRED_OVERLAP 0.8
 
+#pragma region CLASS DEFINITIONS
 class ObjectAndLocation
 {
 public:
@@ -75,7 +76,12 @@ public:
 	ImageWithBlueSignObjects(FileNode& node); 
 	void LocateAndAddAllObjects(AnnotatedImages& training_images);  // *** Student needs to develop this routine and add in objects using the addObject method
 private:
-	Mat ComputeCanny(Mat image);
+	Mat ComputeCanny(Mat image, bool isBlurred);
+	Mat ComputeKMeans(Mat image, int k);
+	void ComputeHough(Mat image, Mat return_image);
+	void ComputeHoughP(Mat image, Mat return_image);
+	vector<RotatedRect> GetRotatedBoxs(Mat image);
+	float euclideanDist(Point a, Point b);
 };
 
 class ConfusionMatrix;
@@ -119,6 +125,9 @@ private:
 	int tp, fp, fn;
 };
 
+#pragma endregion CLASS DEFINITIONS
+
+#pragma region OBJECT AND LOCATION
 ObjectAndLocation::ObjectAndLocation(string passed_object_name, Point top_left, Point top_right, Point bottom_right, Point bottom_left, Mat object_image)
 {
 	object_name = passed_object_name;
@@ -209,6 +218,10 @@ void ObjectAndLocation::getVertice(int index, int& x, int& y)
 	}
 }
 
+#pragma endregion OBJECT AND LOCATION
+
+#pragma region IMAGE WITH OBJECTS
+
 ImageWithObjects::ImageWithObjects(string passed_filename)
 {
 	filename = strdup(passed_filename.c_str());
@@ -295,6 +308,7 @@ string ImageWithObjects::ExtractObjectName(string filenamestr)
 	return object_name;
 }
 
+#pragma endregion IMAGE WITH OBJECTS
 
 ImageWithBlueSignObjects::ImageWithBlueSignObjects(string passed_filename) :
 	ImageWithObjects(passed_filename)
@@ -305,6 +319,7 @@ ImageWithBlueSignObjects::ImageWithBlueSignObjects(FileNode& node) :
 {
 }
 
+#pragma region ANNOTATED IMAGES
 
 AnnotatedImages::AnnotatedImages(string directory_name)
 {
@@ -463,6 +478,10 @@ ImageWithObjects* AnnotatedImages::FindAnnotatedImage(string filename_to_find)
 	return NULL;
 }
 
+#pragma endregion ANNOTATED IMAGES
+
+#pragma region MAIN AND OTHER
+
 void MyApplication()
 {
 	AnnotatedImages trainingImages;
@@ -497,7 +516,7 @@ void MyApplication()
 	imwrite("AllGroundTruthObjectImages.jpg", image_of_all_ground_truth_objects);*/
 	ch = cv::waitKey(1);
 
-	AnnotatedImages unknownImages("Blue Signs/Smaller Testing");
+	AnnotatedImages unknownImages("Blue Signs/Smallest Testing");
 	unknownImages.LocateAndAddAllObjects(trainingImages);
 	FileStorage unknowns_file("BlueSignsTesting.xml", FileStorage::WRITE);
 	if (!unknowns_file.isOpened())
@@ -754,6 +773,10 @@ void AnnotatedImages::CompareObjectsWithGroundTruth(AnnotatedImages& training_im
 	}
 }
 
+#pragma endregion MAIN AND OTHER
+
+#pragma region CONFUSION MATRIX
+
 // Determine object classes from the training_images (vector of strings)
 // Create and zero a confusion matrix
 ConfusionMatrix::ConfusionMatrix(AnnotatedImages training_images)
@@ -847,7 +870,7 @@ void ConfusionMatrix::Print()
 		cout << endl << "Precision = " << precision << endl << "Recall = " << recall << endl << "F1 = " << f1 << endl;
 }
 
-
+#pragma endregion CONFUSION MATRIX
 
 
 void ObjectAndLocation::setImage(Mat object_image)
@@ -860,28 +883,149 @@ void ObjectAndLocation::setImage(Mat object_image)
 void ImageWithBlueSignObjects::LocateAndAddAllObjects(AnnotatedImages& training_images)
 {
 	Mat original_image = this->image;
+	
+	Mat smaller_image, hsv_image;
+	resize(original_image, smaller_image, Size(original_image.cols / 4, original_image.rows / 4));
+	cvtColor(smaller_image, hsv_image, COLOR_BGR2HSV);
 
-	Mat canny_image = ComputeCanny(image);
-	Mat smaller_image;
-	resize(canny_image, smaller_image, Size(canny_image.cols / 4, canny_image.rows / 4));
-	imshow(this->filename, smaller_image);
+	Mat kmeans = ComputeKMeans(hsv_image, 3);
+	
+	Mat canny_image_blur = ComputeCanny(kmeans, true);
+
+	
+
+	//imshow(this->filename, drawing);
 }
 
-
-Mat ImageWithBlueSignObjects::ComputeCanny(Mat image)
+vector<RotatedRect> ImageWithBlueSignObjects::GetRotatedBoxs(Mat image)
 {
-	Mat canny_image, image_gray;
-	canny_image.create(image.size(), image.type());
-	cvtColor(image, image_gray, COLOR_BGR2GRAY);
+	vector<RotatedRect> result;
+	vector<vector<Point>> contours;
+	findContours(image, contours, RETR_TREE, CHAIN_APPROX_SIMPLE);
 
-	blur(image_gray, canny_image, Size(3, 3));
+	vector<Vec4i> hierarchy;
+	Mat drawing = Mat::zeros(image.size(), CV_8UC3);
+	RNG rng(12345);
+	Scalar color1 = Scalar(0, 100, 0);
+
+	for (int i = 0; i < contours.size(); i++)
+	{
+
+		drawContours(drawing, contours, i, color1, 1, 8, hierarchy, 0, cv::Point());
+
+		Rect boundingBox = boundingRect(contours[i]);
+		RotatedRect rotatedBoundingBox = minAreaRect(contours[i]);
+
+		Point2f corners[4];
+		rotatedBoundingBox.points(corners);
+
+		float side_one = euclideanDist(corners[0], corners[1]);
+		float side_two = euclideanDist(corners[0], corners[3]);
+
+		float ratio = side_one / side_two;
+
+		if ((side_one * side_two) >= 1000)
+		{
+			if (ratio <= 1.3 && ratio >= 0.7)
+			{
+				Scalar color2 = Scalar(rng.uniform(0, 256), rng.uniform(0, 256), rng.uniform(0, 256));
+				line(drawing, corners[0], corners[1], color2);
+				line(drawing, corners[1], corners[2], color2);
+				line(drawing, corners[2], corners[3], color2);
+				line(drawing, corners[3], corners[0], color2);
+
+				result.push_back(rotatedBoundingBox);
+			}
+		}
+	}
+}
+
+float ImageWithBlueSignObjects::euclideanDist(Point p, Point q) {
+	Point diff = p - q;
+	return cv::sqrt(diff.x * diff.x + diff.y * diff.y);
+}
+
+Mat ImageWithBlueSignObjects::ComputeCanny(Mat image, bool isBlurred)
+{
+	Mat canny_image;
+	canny_image.create(image.size(), image.type());
+	cvtColor(image, canny_image, COLOR_BGR2GRAY);
+
+	if (isBlurred)
+	{
+		blur(canny_image, canny_image, Size(3, 3));
+	}
 
 	int lowThreshold = 50;
-	int ratio = 3;
+	int ratio = 4;
 	int kernel_size = 5;
 	Canny(canny_image, canny_image, lowThreshold, lowThreshold * ratio, kernel_size);
 
 	return canny_image;
+}
+
+Mat ImageWithBlueSignObjects::ComputeKMeans(Mat image, int k)
+{
+	Mat samples(image.rows * image.cols, 3, CV_32F);
+	for (int y = 0; y < image.rows; y++)
+		for (int x = 0; x < image.cols; x++)
+			for (int z = 0; z < 3; z++)
+				samples.at<float>(y + x * image.rows, z) = image.at<Vec3b>(y, x)[z];
+
+
+	int clusterCount = k;
+	Mat labels;
+	int attempts = 5;
+	Mat centers;
+	kmeans(samples, clusterCount, labels, cv::TermCriteria(1 | 2, 10000, 0.0001), attempts, KMEANS_PP_CENTERS, centers);
+
+
+	Mat new_image(image.size(), image.type());
+	for (int y = 0; y < image.rows; y++)
+	{
+		for (int x = 0; x < image.cols; x++)
+		{
+			int cluster_idx = labels.at<int>(y + x * image.rows, 0);
+			new_image.at<Vec3b>(y, x)[0] = centers.at<float>(cluster_idx, 0);
+			new_image.at<Vec3b>(y, x)[1] = centers.at<float>(cluster_idx, 1);
+			new_image.at<Vec3b>(y, x)[2] = centers.at<float>(cluster_idx, 2);
+		}
+	}
+
+	return new_image;
+}
+
+void ImageWithBlueSignObjects::ComputeHough(Mat image, Mat return_image)
+{
+	// Standard Hough Line Transform
+	vector<Vec2f> lines; // will hold the results of the detection
+	HoughLines(image, lines, 1, CV_PI / 180, 150, 0, 0); // runs the actual detection
+	// Draw the lines
+	for (size_t i = 0; i < lines.size(); i++)
+	{
+		float rho = lines[i][0], theta = lines[i][1];
+		Point pt1, pt2;
+		double a = cos(theta), b = sin(theta);
+		double x0 = a * rho, y0 = b * rho;
+		pt1.x = cvRound(x0 + 1000 * (-b));
+		pt1.y = cvRound(y0 + 1000 * (a));
+		pt2.x = cvRound(x0 - 1000 * (-b));
+		pt2.y = cvRound(y0 - 1000 * (a));
+		line(return_image, pt1, pt2, Scalar(0, 0, 255), 3, LINE_AA);
+	}
+}
+
+void ImageWithBlueSignObjects::ComputeHoughP(Mat image, Mat return_image)
+{
+	// Probabilistic Line Transform
+	vector<Vec4i> linesP; // will hold the results of the detection
+	HoughLinesP(image, linesP, 1, CV_PI / 180, 50, 50, 10); // runs the actual detection
+	// Draw the lines
+	for (size_t i = 0; i < linesP.size(); i++)
+	{
+		Vec4i l = linesP[i];
+		line(return_image, Point(l[0], l[1]), Point(l[2], l[3]), Scalar(0, 0, 255), 3, LINE_AA);
+	}
 }
 
 #define BAD_MATCHING_VALUE 1000000000.0;

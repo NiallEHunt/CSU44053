@@ -1,34 +1,18 @@
 <?xml version="1.0"?>
 <opencv_storage>
 <AnnotatedImages>
-  <name>"Blue Signs/Smaller Testing"</name>
+  <name>"Blue Signs/Smallest Testing"</name>
   <ImagesAndObjects>
     <_>
-      <Filename>"Blue Signs/Smaller Testing/Blue004.jpg"</Filename>
+      <Filename>"Blue Signs/Smallest Testing/Blue004.jpg"</Filename>
       <Objects>
         </Objects></_>
     <_>
-      <Filename>"Blue Signs/Smaller Testing/Blue008.jpg"</Filename>
+      <Filename>"Blue Signs/Smallest Testing/Blue020.jpg"</Filename>
       <Objects>
         </Objects></_>
     <_>
-      <Filename>"Blue Signs/Smaller Testing/Blue020.jpg"</Filename>
-      <Objects>
-        </Objects></_>
-    <_>
-      <Filename>"Blue Signs/Smaller Testing/Blue034.jpg"</Filename>
-      <Objects>
-        </Objects></_>
-    <_>
-      <Filename>"Blue Signs/Smaller Testing/Blue043.jpg"</Filename>
-      <Objects>
-        </Objects></_>
-    <_>
-      <Filename>"Blue Signs/Smaller Testing/Blue044.jpg"</Filename>
-      <Objects>
-        </Objects></_>
-    <_>
-      <Filename>"Blue Signs/Smaller Testing/Blue047.jpg"</Filename>
+      <Filename>"Blue Signs/Smallest Testing/Blue043.jpg"</Filename>
       <Objects>
         </Objects></_></ImagesAndObjects></AnnotatedImages>
 </opencv_storage>

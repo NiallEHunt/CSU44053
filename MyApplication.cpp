@@ -76,7 +76,7 @@ public:
 	ImageWithBlueSignObjects(FileNode& node); 
 	void LocateAndAddAllObjects(AnnotatedImages& training_images);  // *** Student needs to develop this routine and add in objects using the addObject method
 private:
-	Mat ComputeCanny(Mat image, bool isBlurred);
+	Mat ComputeCanny(Mat image, int low_threshold, int high_threshold, int kernel_size, bool isBlurred);
 	Mat ComputeKMeans(Mat image, int k);
 	void ComputeHough(Mat image, Mat return_image);
 	void ComputeHoughP(Mat image, Mat return_image);
@@ -884,15 +884,14 @@ void ObjectAndLocation::setImage(Mat object_image)
 void ImageWithBlueSignObjects::LocateAndAddAllObjects(AnnotatedImages& training_images)
 {
 	Mat original_image = this->image;
-	
+
 	Mat smaller_image, hsv_image;
 	resize(original_image, smaller_image, Size(original_image.cols / 4, original_image.rows / 4));
 	cvtColor(smaller_image, hsv_image, COLOR_BGR2HSV);
 
 	Mat kmeans = ComputeKMeans(hsv_image, 3);
-	
-	Mat canny_image_blur = ComputeCanny(kmeans, true);
-	
+
+	Mat canny_image_blur = ComputeCanny(smaller_image, 100, 200, 5, true);
 
 	vector<RotatedRect> rectangles;
 	GetRotatedBoxes(canny_image_blur, rectangles, false, this->filename);
@@ -900,27 +899,30 @@ void ImageWithBlueSignObjects::LocateAndAddAllObjects(AnnotatedImages& training_
 	for (size_t i = 0; i < rectangles.size(); i++)
 	{
 		Rect boundingBox = rectangles[i].boundingRect();
+		rectangle(smaller_image, boundingBox, Scalar(255, 0, 0), 1);
 		try
 		{
 			Mat object = smaller_image(boundingBox);
-			string matched = tryMatch(object, training_images, 0.3, 0.65);
+			string matched = tryMatch(object, training_images, 0.2, 0.6);
 
 			if (matched != "")
 			{
 				//imshow(this->filename + " i " + to_string(i), object);
-				int top_left_col = boundingBox.x;
-				int top_left_row = boundingBox.y;
+				int top_left_col = boundingBox.x * 4;
+				int top_left_row = boundingBox.y * 4;
 
-				int top_right_col = boundingBox.x + boundingBox.width;
-				int top_right_row = boundingBox.y;
+				int top_right_col = (boundingBox.x + boundingBox.width) * 4;
+				int top_right_row = boundingBox.y * 4;
 
-				int bottom_right_col = boundingBox.x + boundingBox.width;
-				int bottom_right_row = boundingBox.y + boundingBox.height;
+				int bottom_right_col = (boundingBox.x + boundingBox.width) * 4;
+				int bottom_right_row = (boundingBox.y + boundingBox.height) * 4;
 
-				int bottom_left_col = boundingBox.x;
-				int bottom_left_row = boundingBox.y + boundingBox.height;
+				int bottom_left_col = boundingBox.x * 4;
+				int bottom_left_row = (boundingBox.y + boundingBox.height) * 4;
 
 				addObject(matched, top_left_col, top_left_row, top_right_col, top_left_row, bottom_right_col, bottom_right_row, bottom_left_col, bottom_left_row, object);
+
+				//imshow(matched + " i " + to_string(i), object);
 			}
 		}
 		catch (const std::exception&)
@@ -932,11 +934,17 @@ void ImageWithBlueSignObjects::LocateAndAddAllObjects(AnnotatedImages& training_
 
 #pragma region HELPER FUNCTIONS
 
-string ImageWithBlueSignObjects::tryMatch(Mat image, AnnotatedImages& training_images, double hist_template, double template_threshold)
+string ImageWithBlueSignObjects::tryMatch(Mat image, AnnotatedImages& training_images, double hist_threshold, double template_threshold)
 {
 	vector<ImageWithObjects*> train_imgs = training_images.annotated_images;
+	double maximum_correl = 0.0;
+	string object_name = "";
+
 	for (size_t i = 0; i < train_imgs.size(); i++)
 	{
+		
+
+		//imshow(train_imgs[i]->getObject(0)->getName() + " " + to_string(i), train_imgs[i]->getObject(0)->getImage());
 		Mat templ = train_imgs[i]->getObject(0)->getImage();
 		resize(templ, templ, image.size());
 
@@ -960,14 +968,14 @@ string ImageWithBlueSignObjects::tryMatch(Mat image, AnnotatedImages& training_i
 
 		calcHist(&templ_hsv, 1, channels, Mat(), templ_hist, 2, histSize, ranges, true, false);
 		normalize(templ_hist, templ_hist, 0, 1, NORM_MINMAX, -1, Mat());
-		
+
 		double comparison = compareHist(image_hist, templ_hist, HISTCMP_CORREL);
 
-		if (comparison < hist_template)
+		if (comparison < hist_threshold)
 			continue;
 
 		int result_cols = image.cols - templ.cols + 1;
-		int result_rows = image.rows- templ.rows + 1;
+		int result_rows = image.rows - templ.rows + 1;
 		result.create(result_rows, result_cols, CV_32FC1);
 
 		matchTemplate(image, templ, result, TM_CCORR_NORMED);
@@ -979,9 +987,18 @@ string ImageWithBlueSignObjects::tryMatch(Mat image, AnnotatedImages& training_i
 
 		cout << "Min Value = " << minVal << " Max value = " << maxVal << endl;
 
-		if (maxVal > template_threshold)
-			return train_imgs[i]->getObject(0)->getName();
+		if (maxVal > maximum_correl)
+		{
+			maximum_correl = maxVal;
+			object_name = train_imgs[i]->getObject(0)->getName();
+		}
 	}
+
+	if (maximum_correl > template_threshold)
+	{
+		return object_name;
+	}
+
 	return "";
 }
 
@@ -1050,7 +1067,7 @@ void ImageWithBlueSignObjects::GetSquares(Mat image, vector<vector<Point>>& squa
 void ImageWithBlueSignObjects::GetRotatedBoxes(Mat image, vector<RotatedRect>& result, bool isDrawBoxes = false, string name = "")
 {
 	vector<vector<Point>> contours;
-	findContours(image, contours, RETR_TREE, CHAIN_APPROX_SIMPLE);
+	findContours(image, contours, RETR_EXTERNAL, CHAIN_APPROX_SIMPLE);
 
 	vector<Vec4i> hierarchy;
 	Mat drawing = Mat::zeros(image.size(), CV_8UC3);
@@ -1063,10 +1080,10 @@ void ImageWithBlueSignObjects::GetRotatedBoxes(Mat image, vector<RotatedRect>& r
 
 		drawContours(drawing, contours, i, color1, 1, 8, hierarchy, 0, cv::Point());
 
-		/*approxPolyDP(Mat(contours[i]), approx, arcLength(Mat(contours[i]), true) * 0.02, true);
+		approxPolyDP(Mat(contours[i]), approx, arcLength(Mat(contours[i]), true) * 0.02, true);
 
 		if (approx.size() != 4)
-			continue;*/
+			continue;
 
 		Rect boundingBox = boundingRect(contours[i]);
 		RotatedRect rotatedBoundingBox = minAreaRect(contours[i]);
@@ -1076,6 +1093,9 @@ void ImageWithBlueSignObjects::GetRotatedBoxes(Mat image, vector<RotatedRect>& r
 
 		float side_one = euclideanDist(corners[0], corners[1]);
 		float side_two = euclideanDist(corners[0], corners[3]);
+		
+		/*float side_one = boundingBox.width;
+		float side_two = boundingBox.height;*/
 
 		float ratio = side_one / side_two;
 
@@ -1109,7 +1129,7 @@ float ImageWithBlueSignObjects::euclideanDist(Point p, Point q) {
 	return cv::sqrt(diff.x * diff.x + diff.y * diff.y);
 }
 
-Mat ImageWithBlueSignObjects::ComputeCanny(Mat image, bool isBlurred)
+Mat ImageWithBlueSignObjects::ComputeCanny(Mat image, int low_threshold, int high_threshold, int kernel_size, bool isBlurred)
 {
 	Mat canny_image;
 	canny_image.create(image.size(), image.type());
@@ -1120,10 +1140,7 @@ Mat ImageWithBlueSignObjects::ComputeCanny(Mat image, bool isBlurred)
 		blur(canny_image, canny_image, Size(3, 3));
 	}
 
-	int lowThreshold = 50;
-	int ratio = 4;
-	int kernel_size = 5;
-	Canny(canny_image, canny_image, lowThreshold, lowThreshold * ratio, kernel_size);
+	Canny(canny_image, canny_image, low_threshold, high_threshold, kernel_size);
 
 	return canny_image;
 }

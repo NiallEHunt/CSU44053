@@ -80,7 +80,7 @@ private:
 	Mat ComputeKMeans(Mat image, int k);
 	void ComputeHough(Mat image, Mat return_image);
 	void ComputeHoughP(Mat image, Mat return_image);
-	vector<RotatedRect> GetRotatedBoxs(Mat image);
+	vector<RotatedRect> GetRotatedBoxes(Mat image, bool isDrawBoxes, string name);
 	float euclideanDist(Point a, Point b);
 };
 
@@ -879,7 +879,6 @@ void ObjectAndLocation::setImage(Mat object_image)
 	// *** Student should add any initialisation (of their images or features; see private data below) they wish into this method.
 }
 
-
 void ImageWithBlueSignObjects::LocateAndAddAllObjects(AnnotatedImages& training_images)
 {
 	Mat original_image = this->image;
@@ -891,13 +890,11 @@ void ImageWithBlueSignObjects::LocateAndAddAllObjects(AnnotatedImages& training_
 	Mat kmeans = ComputeKMeans(hsv_image, 3);
 	
 	Mat canny_image_blur = ComputeCanny(kmeans, true);
-
 	
-
-	//imshow(this->filename, drawing);
+	vector<RotatedRect> rectangles = GetRotatedBoxes(canny_image_blur, true, this->filename);
 }
 
-vector<RotatedRect> ImageWithBlueSignObjects::GetRotatedBoxs(Mat image)
+vector<RotatedRect> ImageWithBlueSignObjects::GetRotatedBoxes(Mat image, bool isDrawBoxes = false, string name = "")
 {
 	vector<RotatedRect> result;
 	vector<vector<Point>> contours;
@@ -938,6 +935,13 @@ vector<RotatedRect> ImageWithBlueSignObjects::GetRotatedBoxs(Mat image)
 			}
 		}
 	}
+
+	if (isDrawBoxes)
+	{
+		imshow(name, drawing);
+	}
+
+	return result;
 }
 
 float ImageWithBlueSignObjects::euclideanDist(Point p, Point q) {

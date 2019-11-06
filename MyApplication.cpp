@@ -80,7 +80,7 @@ private:
 	Mat ComputeKMeans(Mat image, int k);
 	void ComputeHough(Mat image, Mat return_image);
 	void ComputeHoughP(Mat image, Mat return_image);
-	vector<RotatedRect> GetRotatedBoxes(Mat image, bool isDrawBoxes, string name);
+	void GetRotatedBoxes(Mat image, vector<RotatedRect>& result, bool isDrawBoxes, string name);
 	float euclideanDist(Point a, Point b);
 	void GetSquares(Mat image, vector<vector<Point>>& squares);
 	bool tryMatch(Mat image, AnnotatedImages& training_images, double hist_threshold, double template_threshold);
@@ -893,7 +893,9 @@ void ImageWithBlueSignObjects::LocateAndAddAllObjects(AnnotatedImages& training_
 	
 	Mat canny_image_blur = ComputeCanny(kmeans, true);
 	
-	vector<RotatedRect> rectangles = GetRotatedBoxes(canny_image_blur, false, this->filename);
+
+	vector<RotatedRect> rectangles;
+	GetRotatedBoxes(canny_image_blur, rectangles, false, this->filename);
 
 	for (size_t i = 0; i < rectangles.size(); i++)
 	{
@@ -902,7 +904,7 @@ void ImageWithBlueSignObjects::LocateAndAddAllObjects(AnnotatedImages& training_
 		{
 			Mat object = smaller_image(boundingBox);
 
-			if (tryMatch(object, training_images, 0.4, 0.6))
+			if (tryMatch(object, training_images, 0.3, 0.65))
 			{
 				imshow(this->filename + " i " + to_string(i), object);
 			}
@@ -1031,9 +1033,8 @@ void ImageWithBlueSignObjects::GetSquares(Mat image, vector<vector<Point>>& squa
 	}
 }
 
-vector<RotatedRect> ImageWithBlueSignObjects::GetRotatedBoxes(Mat image, bool isDrawBoxes = false, string name = "")
+void ImageWithBlueSignObjects::GetRotatedBoxes(Mat image, vector<RotatedRect>& result, bool isDrawBoxes = false, string name = "")
 {
-	vector<RotatedRect> result;
 	vector<vector<Point>> contours;
 	findContours(image, contours, RETR_TREE, CHAIN_APPROX_SIMPLE);
 
@@ -1066,13 +1067,16 @@ vector<RotatedRect> ImageWithBlueSignObjects::GetRotatedBoxes(Mat image, bool is
 
 		if ((side_one * side_two) >= 1000)
 		{
-			if (ratio <= 1.3 && ratio >= 0.7)
+			if (ratio <= 1.4 && ratio >= 0.6)
 			{
-				Scalar color2 = Scalar(rng.uniform(0, 256), rng.uniform(0, 256), rng.uniform(0, 256));
-				line(drawing, corners[0], corners[1], color2);
-				line(drawing, corners[1], corners[2], color2);
-				line(drawing, corners[2], corners[3], color2);
-				line(drawing, corners[3], corners[0], color2);
+				if (isDrawBoxes)
+				{
+					Scalar color2 = Scalar(rng.uniform(0, 256), rng.uniform(0, 256), rng.uniform(0, 256));
+					line(drawing, corners[0], corners[1], color2);
+					line(drawing, corners[1], corners[2], color2);
+					line(drawing, corners[2], corners[3], color2);
+					line(drawing, corners[3], corners[0], color2);
+				}
 
 				result.push_back(rotatedBoundingBox);
 			}
@@ -1083,8 +1087,7 @@ vector<RotatedRect> ImageWithBlueSignObjects::GetRotatedBoxes(Mat image, bool is
 	{
 		imshow(name, drawing);
 	}
-
-	return result;
+	drawing.deallocate();
 }
 
 float ImageWithBlueSignObjects::euclideanDist(Point p, Point q) {

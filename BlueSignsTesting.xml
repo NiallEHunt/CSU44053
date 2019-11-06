@@ -1,34 +1,3100 @@
 <?xml version="1.0"?>
 <opencv_storage>
 <AnnotatedImages>
-  <name>"Blue Signs/Smaller Testing"</name>
+  <name>"Blue Signs/Testing"</name>
   <ImagesAndObjects>
     <_>
-      <Filename>"Blue Signs/Smaller Testing/Blue004.jpg"</Filename>
+      <Filename>"Blue Signs/Testing/Blue001.jpg"</Filename>
+      <Objects>
+        <_>
+          <nameStr>Exit</nameStr>
+          <coordinates>
+            <_>
+              584 270</_>
+            <_>
+              718 270</_>
+            <_>
+              718 399</_>
+            <_>
+              584 399</_></coordinates></_>
+        <_>
+          <nameStr>Exit</nameStr>
+          <coordinates>
+            <_>
+              584 270</_>
+            <_>
+              718 270</_>
+            <_>
+              718 399</_>
+            <_>
+              584 399</_></coordinates></_>
+        <_>
+          <nameStr>Exit</nameStr>
+          <coordinates>
+            <_>
+              590 277</_>
+            <_>
+              711 277</_>
+            <_>
+              711 392</_>
+            <_>
+              590 392</_></coordinates></_>
+        <_>
+          <nameStr>Exit</nameStr>
+          <coordinates>
+            <_>
+              590 277</_>
+            <_>
+              711 277</_>
+            <_>
+              711 392</_>
+            <_>
+              590 392</_></coordinates></_>
+        <_>
+          <nameStr>Escalator</nameStr>
+          <coordinates>
+            <_>
+              39 48</_>
+            <_>
+              105 48</_>
+            <_>
+              105 122</_>
+            <_>
+              39 122</_></coordinates></_>
+        <_>
+          <nameStr>Escalator</nameStr>
+          <coordinates>
+            <_>
+              39 48</_>
+            <_>
+              105 48</_>
+            <_>
+              105 122</_>
+            <_>
+              39 122</_></coordinates></_></Objects></_>
+    <_>
+      <Filename>"Blue Signs/Testing/Blue002.jpg"</Filename>
+      <Objects>
+        <_>
+          <nameStr>Ladies</nameStr>
+          <coordinates>
+            <_>
+              725 336</_>
+            <_>
+              812 336</_>
+            <_>
+              812 418</_>
+            <_>
+              725 418</_></coordinates></_>
+        <_>
+          <nameStr>Disabled</nameStr>
+          <coordinates>
+            <_>
+              552 231</_>
+            <_>
+              684 231</_>
+            <_>
+              684 358</_>
+            <_>
+              552 358</_></coordinates></_>
+        <_>
+          <nameStr>Disabled</nameStr>
+          <coordinates>
+            <_>
+              552 231</_>
+            <_>
+              684 231</_>
+            <_>
+              684 358</_>
+            <_>
+              552 358</_></coordinates></_>
+        <_>
+          <nameStr>Disabled</nameStr>
+          <coordinates>
+            <_>
+              556 235</_>
+            <_>
+              680 235</_>
+            <_>
+              680 354</_>
+            <_>
+              556 354</_></coordinates></_>
+        <_>
+          <nameStr>Disabled</nameStr>
+          <coordinates>
+            <_>
+              556 235</_>
+            <_>
+              680 235</_>
+            <_>
+              680 354</_>
+            <_>
+              556 354</_></coordinates></_>
+        <_>
+          <nameStr>Gents</nameStr>
+          <coordinates>
+            <_>
+              592 271</_>
+            <_>
+              642 271</_>
+            <_>
+              642 319</_>
+            <_>
+              592 319</_></coordinates></_>
+        <_>
+          <nameStr>Gents</nameStr>
+          <coordinates>
+            <_>
+              592 271</_>
+            <_>
+              642 271</_>
+            <_>
+              642 319</_>
+            <_>
+              592 319</_></coordinates></_></Objects></_>
+    <_>
+      <Filename>"Blue Signs/Testing/Blue003.jpg"</Filename>
+      <Objects>
+        <_>
+          <nameStr>Exit</nameStr>
+          <coordinates>
+            <_>
+              268 258</_>
+            <_>
+              348 258</_>
+            <_>
+              348 326</_>
+            <_>
+              268 326</_></coordinates></_>
+        <_>
+          <nameStr>Exit</nameStr>
+          <coordinates>
+            <_>
+              268 258</_>
+            <_>
+              348 258</_>
+            <_>
+              348 326</_>
+            <_>
+              268 326</_></coordinates></_>
+        <_>
+          <nameStr>Exit</nameStr>
+          <coordinates>
+            <_>
+              282 248</_>
+            <_>
+              336 248</_>
+            <_>
+              336 303</_>
+            <_>
+              282 303</_></coordinates></_>
+        <_>
+          <nameStr>Exit</nameStr>
+          <coordinates>
+            <_>
+              283 249</_>
+            <_>
+              335 249</_>
+            <_>
+              335 302</_>
+            <_>
+              283 302</_></coordinates></_>
+        <_>
+          <nameStr>Exit</nameStr>
+          <coordinates>
+            <_>
+              255 234</_>
+            <_>
+              362 234</_>
+            <_>
+              362 343</_>
+            <_>
+              255 343</_></coordinates></_>
+        <_>
+          <nameStr>Exit</nameStr>
+          <coordinates>
+            <_>
+              241 226</_>
+            <_>
+              369 226</_>
+            <_>
+              369 347</_>
+            <_>
+              241 347</_></coordinates></_></Objects></_>
+    <_>
+      <Filename>"Blue Signs/Testing/Blue004.jpg"</Filename>
+      <Objects>
+        <_>
+          <nameStr>Disabled</nameStr>
+          <coordinates>
+            <_>
+              509 374</_>
+            <_>
+              557 374</_>
+            <_>
+              557 422</_>
+            <_>
+              509 422</_></coordinates></_>
+        <_>
+          <nameStr>Disabled</nameStr>
+          <coordinates>
+            <_>
+              509 374</_>
+            <_>
+              557 374</_>
+            <_>
+              557 422</_>
+            <_>
+              509 422</_></coordinates></_></Objects></_>
+    <_>
+      <Filename>"Blue Signs/Testing/Blue005.jpg"</Filename>
+      <Objects>
+        <_>
+          <nameStr>Coffee</nameStr>
+          <coordinates>
+            <_>
+              200 345</_>
+            <_>
+              290 345</_>
+            <_>
+              290 443</_>
+            <_>
+              200 443</_></coordinates></_>
+        <_>
+          <nameStr>Exit</nameStr>
+          <coordinates>
+            <_>
+              378 343</_>
+            <_>
+              432 343</_>
+            <_>
+              432 399</_>
+            <_>
+              378 399</_></coordinates></_></Objects></_>
+    <_>
+      <Filename>"Blue Signs/Testing/Blue007.jpg"</Filename>
+      <Objects>
+        <_>
+          <nameStr>Gents</nameStr>
+          <coordinates>
+            <_>
+              501 204</_>
+            <_>
+              582 204</_>
+            <_>
+              582 285</_>
+            <_>
+              501 285</_></coordinates></_>
+        <_>
+          <nameStr>Gents</nameStr>
+          <coordinates>
+            <_>
+              501 204</_>
+            <_>
+              582 204</_>
+            <_>
+              582 285</_>
+            <_>
+              501 285</_></coordinates></_>
+        <_>
+          <nameStr>Gents</nameStr>
+          <coordinates>
+            <_>
+              504 207</_>
+            <_>
+              578 207</_>
+            <_>
+              578 282</_>
+            <_>
+              504 282</_></coordinates></_>
+        <_>
+          <nameStr>Gents</nameStr>
+          <coordinates>
+            <_>
+              504 208</_>
+            <_>
+              578 208</_>
+            <_>
+              578 282</_>
+            <_>
+              504 282</_></coordinates></_>
+        <_>
+          <nameStr>Disabled</nameStr>
+          <coordinates>
+            <_>
+              396 199</_>
+            <_>
+              481 199</_>
+            <_>
+              481 283</_>
+            <_>
+              396 283</_></coordinates></_>
+        <_>
+          <nameStr>Disabled</nameStr>
+          <coordinates>
+            <_>
+              396 199</_>
+            <_>
+              481 199</_>
+            <_>
+              481 283</_>
+            <_>
+              396 283</_></coordinates></_>
+        <_>
+          <nameStr>Disabled</nameStr>
+          <coordinates>
+            <_>
+              399 202</_>
+            <_>
+              477 202</_>
+            <_>
+              477 280</_>
+            <_>
+              399 280</_></coordinates></_>
+        <_>
+          <nameStr>Disabled</nameStr>
+          <coordinates>
+            <_>
+              399 202</_>
+            <_>
+              477 202</_>
+            <_>
+              477 280</_>
+            <_>
+              399 280</_></coordinates></_>
+        <_>
+          <nameStr>Information</nameStr>
+          <coordinates>
+            <_>
+              419 223</_>
+            <_>
+              457 223</_>
+            <_>
+              457 259</_>
+            <_>
+              419 259</_></coordinates></_></Objects></_>
+    <_>
+      <Filename>"Blue Signs/Testing/Blue008.jpg"</Filename>
+      <Objects>
+        <_>
+          <nameStr>Information</nameStr>
+          <coordinates>
+            <_>
+              798 465</_>
+            <_>
+              845 465</_>
+            <_>
+              845 506</_>
+            <_>
+              798 506</_></coordinates></_>
+        <_>
+          <nameStr>Information</nameStr>
+          <coordinates>
+            <_>
+              798 465</_>
+            <_>
+              845 465</_>
+            <_>
+              845 506</_>
+            <_>
+              798 506</_></coordinates></_>
+        <_>
+          <nameStr>Gents</nameStr>
+          <coordinates>
+            <_>
+              475 310</_>
+            <_>
+              518 310</_>
+            <_>
+              518 353</_>
+            <_>
+              475 353</_></coordinates></_>
+        <_>
+          <nameStr>Gents</nameStr>
+          <coordinates>
+            <_>
+              475 310</_>
+            <_>
+              518 310</_>
+            <_>
+              518 353</_>
+            <_>
+              475 353</_></coordinates></_>
+        <_>
+          <nameStr>Gents</nameStr>
+          <coordinates>
+            <_>
+              424 312</_>
+            <_>
+              460 312</_>
+            <_>
+              460 349</_>
+            <_>
+              424 349</_></coordinates></_>
+        <_>
+          <nameStr>Gents</nameStr>
+          <coordinates>
+            <_>
+              424 312</_>
+            <_>
+              460 312</_>
+            <_>
+              460 349</_>
+            <_>
+              424 349</_></coordinates></_></Objects></_>
+    <_>
+      <Filename>"Blue Signs/Testing/Blue011.jpg"</Filename>
+      <Objects>
+        <_>
+          <nameStr>Exit</nameStr>
+          <coordinates>
+            <_>
+              893 128</_>
+            <_>
+              952 128</_>
+            <_>
+              952 191</_>
+            <_>
+              893 191</_></coordinates></_>
+        <_>
+          <nameStr>Exit</nameStr>
+          <coordinates>
+            <_>
+              893 128</_>
+            <_>
+              952 128</_>
+            <_>
+              952 191</_>
+            <_>
+              893 191</_></coordinates></_>
+        <_>
+          <nameStr>Coffee</nameStr>
+          <coordinates>
+            <_>
+              896 131</_>
+            <_>
+              949 131</_>
+            <_>
+              949 188</_>
+            <_>
+              896 188</_></coordinates></_>
+        <_>
+          <nameStr>Coffee</nameStr>
+          <coordinates>
+            <_>
+              896 131</_>
+            <_>
+              948 131</_>
+            <_>
+              948 188</_>
+            <_>
+              896 188</_></coordinates></_>
+        <_>
+          <nameStr>Exit</nameStr>
+          <coordinates>
+            <_>
+              67 97</_>
+            <_>
+              132 97</_>
+            <_>
+              132 160</_>
+            <_>
+              67 160</_></coordinates></_>
+        <_>
+          <nameStr>Exit</nameStr>
+          <coordinates>
+            <_>
+              67 97</_>
+            <_>
+              132 97</_>
+            <_>
+              132 160</_>
+            <_>
+              67 160</_></coordinates></_>
+        <_>
+          <nameStr>Exit</nameStr>
+          <coordinates>
+            <_>
+              70 100</_>
+            <_>
+              129 100</_>
+            <_>
+              129 157</_>
+            <_>
+              70 157</_></coordinates></_>
+        <_>
+          <nameStr>Exit</nameStr>
+          <coordinates>
+            <_>
+              70 100</_>
+            <_>
+              129 100</_>
+            <_>
+              129 157</_>
+            <_>
+              70 157</_></coordinates></_></Objects></_>
+    <_>
+      <Filename>"Blue Signs/Testing/Blue012.jpg"</Filename>
+      <Objects>
+        <_>
+          <nameStr>Information</nameStr>
+          <coordinates>
+            <_>
+              114 233</_>
+            <_>
+              171 233</_>
+            <_>
+              171 290</_>
+            <_>
+              114 290</_></coordinates></_>
+        <_>
+          <nameStr>Information</nameStr>
+          <coordinates>
+            <_>
+              28 227</_>
+            <_>
+              100 227</_>
+            <_>
+              100 293</_>
+            <_>
+              28 293</_></coordinates></_>
+        <_>
+          <nameStr>Information</nameStr>
+          <coordinates>
+            <_>
+              28 227</_>
+            <_>
+              100 227</_>
+            <_>
+              100 293</_>
+            <_>
+              28 293</_></coordinates></_>
+        <_>
+          <nameStr>Information</nameStr>
+          <coordinates>
+            <_>
+              32 231</_>
+            <_>
+              96 231</_>
+            <_>
+              96 289</_>
+            <_>
+              32 289</_></coordinates></_>
+        <_>
+          <nameStr>Information</nameStr>
+          <coordinates>
+            <_>
+              32 231</_>
+            <_>
+              96 231</_>
+            <_>
+              96 289</_>
+            <_>
+              32 289</_></coordinates></_>
+        <_>
+          <nameStr>Exit</nameStr>
+          <coordinates>
+            <_>
+              564 141</_>
+            <_>
+              705 141</_>
+            <_>
+              705 294</_>
+            <_>
+              564 294</_></coordinates></_>
+        <_>
+          <nameStr>Exit</nameStr>
+          <coordinates>
+            <_>
+              564 141</_>
+            <_>
+              705 141</_>
+            <_>
+              705 294</_>
+            <_>
+              564 294</_></coordinates></_>
+        <_>
+          <nameStr>Exit</nameStr>
+          <coordinates>
+            <_>
+              569 145</_>
+            <_>
+              699 145</_>
+            <_>
+              699 291</_>
+            <_>
+              569 291</_></coordinates></_>
+        <_>
+          <nameStr>Exit</nameStr>
+          <coordinates>
+            <_>
+              569 145</_>
+            <_>
+              699 145</_>
+            <_>
+              699 291</_>
+            <_>
+              569 291</_></coordinates></_>
+        <_>
+          <nameStr>Exit</nameStr>
+          <coordinates>
+            <_>
+              246 115</_>
+            <_>
+              987 115</_>
+            <_>
+              987 750</_>
+            <_>
+              246 750</_></coordinates></_></Objects></_>
+    <_>
+      <Filename>"Blue Signs/Testing/Blue016.jpg"</Filename>
+      <Objects>
+        <_>
+          <nameStr>Coffee</nameStr>
+          <coordinates>
+            <_>
+              890 180</_>
+            <_>
+              922 180</_>
+            <_>
+              922 226</_>
+            <_>
+              890 226</_></coordinates></_>
+        <_>
+          <nameStr>Coffee</nameStr>
+          <coordinates>
+            <_>
+              804 169</_>
+            <_>
+              843 169</_>
+            <_>
+              843 223</_>
+            <_>
+              804 223</_></coordinates></_>
+        <_>
+          <nameStr>Coffee</nameStr>
+          <coordinates>
+            <_>
+              635 156</_>
+            <_>
+              684 156</_>
+            <_>
+              684 218</_>
+            <_>
+              635 218</_></coordinates></_>
+        <_>
+          <nameStr>Coffee</nameStr>
+          <coordinates>
+            <_>
+              635 156</_>
+            <_>
+              684 156</_>
+            <_>
+              684 218</_>
+            <_>
+              635 218</_></coordinates></_>
+        <_>
+          <nameStr>Coffee</nameStr>
+          <coordinates>
+            <_>
+              639 160</_>
+            <_>
+              681 160</_>
+            <_>
+              681 214</_>
+            <_>
+              639 214</_></coordinates></_>
+        <_>
+          <nameStr>Coffee</nameStr>
+          <coordinates>
+            <_>
+              639 160</_>
+            <_>
+              681 160</_>
+            <_>
+              681 214</_>
+            <_>
+              639 214</_></coordinates></_>
+        <_>
+          <nameStr>Coffee</nameStr>
+          <coordinates>
+            <_>
+              642 166</_>
+            <_>
+              678 166</_>
+            <_>
+              678 207</_>
+            <_>
+              642 207</_></coordinates></_>
+        <_>
+          <nameStr>Coffee</nameStr>
+          <coordinates>
+            <_>
+              434 130</_>
+            <_>
+              493 130</_>
+            <_>
+              493 199</_>
+            <_>
+              434 199</_></coordinates></_>
+        <_>
+          <nameStr>Coffee</nameStr>
+          <coordinates>
+            <_>
+              434 130</_>
+            <_>
+              493 130</_>
+            <_>
+              493 199</_>
+            <_>
+              434 199</_></coordinates></_>
+        <_>
+          <nameStr>Coffee</nameStr>
+          <coordinates>
+            <_>
+              437 134</_>
+            <_>
+              490 134</_>
+            <_>
+              490 195</_>
+            <_>
+              437 195</_></coordinates></_>
+        <_>
+          <nameStr>Coffee</nameStr>
+          <coordinates>
+            <_>
+              437 134</_>
+            <_>
+              490 134</_>
+            <_>
+              490 195</_>
+            <_>
+              437 195</_></coordinates></_>
+        <_>
+          <nameStr>Coffee</nameStr>
+          <coordinates>
+            <_>
+              279 113</_>
+            <_>
+              349 113</_>
+            <_>
+              349 188</_>
+            <_>
+              279 188</_></coordinates></_>
+        <_>
+          <nameStr>Coffee</nameStr>
+          <coordinates>
+            <_>
+              279 113</_>
+            <_>
+              349 113</_>
+            <_>
+              349 188</_>
+            <_>
+              279 188</_></coordinates></_>
+        <_>
+          <nameStr>Coffee</nameStr>
+          <coordinates>
+            <_>
+              282 116</_>
+            <_>
+              345 116</_>
+            <_>
+              345 184</_>
+            <_>
+              282 184</_></coordinates></_>
+        <_>
+          <nameStr>Coffee</nameStr>
+          <coordinates>
+            <_>
+              282 116</_>
+            <_>
+              345 116</_>
+            <_>
+              345 184</_>
+            <_>
+              282 184</_></coordinates></_>
+        <_>
+          <nameStr>Information</nameStr>
+          <coordinates>
+            <_>
+              286 123</_>
+            <_>
+              347 123</_>
+            <_>
+              347 180</_>
+            <_>
+              286 180</_></coordinates></_></Objects></_>
+    <_>
+      <Filename>"Blue Signs/Testing/Blue017.jpg"</Filename>
+      <Objects>
+        <_>
+          <nameStr>Information</nameStr>
+          <coordinates>
+            <_>
+              596 238</_>
+            <_>
+              645 238</_>
+            <_>
+              645 287</_>
+            <_>
+              596 287</_></coordinates></_>
+        <_>
+          <nameStr>Information</nameStr>
+          <coordinates>
+            <_>
+              434 240</_>
+            <_>
+              493 240</_>
+            <_>
+              493 304</_>
+            <_>
+              434 304</_></coordinates></_>
+        <_>
+          <nameStr>Information</nameStr>
+          <coordinates>
+            <_>
+              435 242</_>
+            <_>
+              492 242</_>
+            <_>
+              492 302</_>
+            <_>
+              435 302</_></coordinates></_>
+        <_>
+          <nameStr>Information</nameStr>
+          <coordinates>
+            <_>
+              508 234</_>
+            <_>
+              570 234</_>
+            <_>
+              570 301</_>
+            <_>
+              508 301</_></coordinates></_></Objects></_>
+    <_>
+      <Filename>"Blue Signs/Testing/Blue018.jpg"</Filename>
+      <Objects>
+        <_>
+          <nameStr>Disabled</nameStr>
+          <coordinates>
+            <_>
+              467 209</_>
+            <_>
+              561 209</_>
+            <_>
+              561 298</_>
+            <_>
+              467 298</_></coordinates></_></Objects></_>
+    <_>
+      <Filename>"Blue Signs/Testing/Blue019.jpg"</Filename>
+      <Objects>
+        <_>
+          <nameStr>Disabled</nameStr>
+          <coordinates>
+            <_>
+              339 291</_>
+            <_>
+              408 291</_>
+            <_>
+              408 361</_>
+            <_>
+              339 361</_></coordinates></_>
+        <_>
+          <nameStr>Disabled</nameStr>
+          <coordinates>
+            <_>
+              339 291</_>
+            <_>
+              408 291</_>
+            <_>
+              408 361</_>
+            <_>
+              339 361</_></coordinates></_>
+        <_>
+          <nameStr>Exit</nameStr>
+          <coordinates>
+            <_>
+              347 295</_>
+            <_>
+              403 295</_>
+            <_>
+              403 346</_>
+            <_>
+              347 346</_></coordinates></_>
+        <_>
+          <nameStr>Exit</nameStr>
+          <coordinates>
+            <_>
+              347 295</_>
+            <_>
+              403 295</_>
+            <_>
+              403 346</_>
+            <_>
+              347 346</_></coordinates></_></Objects></_>
+    <_>
+      <Filename>"Blue Signs/Testing/Blue020.jpg"</Filename>
       <Objects>
         </Objects></_>
     <_>
-      <Filename>"Blue Signs/Smaller Testing/Blue008.jpg"</Filename>
+      <Filename>"Blue Signs/Testing/Blue021.jpg"</Filename>
+      <Objects>
+        <_>
+          <nameStr>TicketDesk</nameStr>
+          <coordinates>
+            <_>
+              146 452</_>
+            <_>
+              191 452</_>
+            <_>
+              191 500</_>
+            <_>
+              146 500</_></coordinates></_>
+        <_>
+          <nameStr>Exit</nameStr>
+          <coordinates>
+            <_>
+              57 271</_>
+            <_>
+              99 271</_>
+            <_>
+              99 319</_>
+            <_>
+              57 319</_></coordinates></_>
+        <_>
+          <nameStr>Exit</nameStr>
+          <coordinates>
+            <_>
+              57 271</_>
+            <_>
+              99 271</_>
+            <_>
+              99 319</_>
+            <_>
+              57 319</_></coordinates></_>
+        <_>
+          <nameStr>Exit</nameStr>
+          <coordinates>
+            <_>
+              60 274</_>
+            <_>
+              97 274</_>
+            <_>
+              97 316</_>
+            <_>
+              60 316</_></coordinates></_>
+        <_>
+          <nameStr>Exit</nameStr>
+          <coordinates>
+            <_>
+              60 274</_>
+            <_>
+              96 274</_>
+            <_>
+              96 316</_>
+            <_>
+              60 316</_></coordinates></_>
+        <_>
+          <nameStr>Exit</nameStr>
+          <coordinates>
+            <_>
+              726 249</_>
+            <_>
+              781 249</_>
+            <_>
+              781 303</_>
+            <_>
+              726 303</_></coordinates></_>
+        <_>
+          <nameStr>Exit</nameStr>
+          <coordinates>
+            <_>
+              729 252</_>
+            <_>
+              778 252</_>
+            <_>
+              778 300</_>
+            <_>
+              729 300</_></coordinates></_></Objects></_>
+    <_>
+      <Filename>"Blue Signs/Testing/Blue023.jpg"</Filename>
+      <Objects>
+        <_>
+          <nameStr>Exit</nameStr>
+          <coordinates>
+            <_>
+              463 292</_>
+            <_>
+              535 292</_>
+            <_>
+              535 337</_>
+            <_>
+              463 337</_></coordinates></_>
+        <_>
+          <nameStr>Exit</nameStr>
+          <coordinates>
+            <_>
+              486 292</_>
+            <_>
+              532 292</_>
+            <_>
+              532 337</_>
+            <_>
+              486 337</_></coordinates></_>
+        <_>
+          <nameStr>Disabled</nameStr>
+          <coordinates>
+            <_>
+              490 296</_>
+            <_>
+              526 296</_>
+            <_>
+              526 333</_>
+            <_>
+              490 333</_></coordinates></_>
+        <_>
+          <nameStr>Disabled</nameStr>
+          <coordinates>
+            <_>
+              490 296</_>
+            <_>
+              526 296</_>
+            <_>
+              526 333</_>
+            <_>
+              490 333</_></coordinates></_></Objects></_>
+    <_>
+      <Filename>"Blue Signs/Testing/Blue025.jpg"</Filename>
       <Objects>
         </Objects></_>
     <_>
-      <Filename>"Blue Signs/Smaller Testing/Blue020.jpg"</Filename>
+      <Filename>"Blue Signs/Testing/Blue028.jpg"</Filename>
+      <Objects>
+        <_>
+          <nameStr>Stairs</nameStr>
+          <coordinates>
+            <_>
+              460 244</_>
+            <_>
+              527 244</_>
+            <_>
+              527 300</_>
+            <_>
+              460 300</_></coordinates></_></Objects></_>
+    <_>
+      <Filename>"Blue Signs/Testing/Blue030.jpg"</Filename>
+      <Objects>
+        <_>
+          <nameStr>Information</nameStr>
+          <coordinates>
+            <_>
+              270 370</_>
+            <_>
+              320 370</_>
+            <_>
+              320 419</_>
+            <_>
+              270 419</_></coordinates></_>
+        <_>
+          <nameStr>Information</nameStr>
+          <coordinates>
+            <_>
+              270 370</_>
+            <_>
+              320 370</_>
+            <_>
+              320 419</_>
+            <_>
+              270 419</_></coordinates></_>
+        <_>
+          <nameStr>Gents</nameStr>
+          <coordinates>
+            <_>
+              273 373</_>
+            <_>
+              317 373</_>
+            <_>
+              317 416</_>
+            <_>
+              273 416</_></coordinates></_>
+        <_>
+          <nameStr>Information</nameStr>
+          <coordinates>
+            <_>
+              274 374</_>
+            <_>
+              312 374</_>
+            <_>
+              312 414</_>
+            <_>
+              274 414</_></coordinates></_>
+        <_>
+          <nameStr>Information</nameStr>
+          <coordinates>
+            <_>
+              208 369</_>
+            <_>
+              259 369</_>
+            <_>
+              259 419</_>
+            <_>
+              208 419</_></coordinates></_>
+        <_>
+          <nameStr>Information</nameStr>
+          <coordinates>
+            <_>
+              208 369</_>
+            <_>
+              259 369</_>
+            <_>
+              259 419</_>
+            <_>
+              208 419</_></coordinates></_>
+        <_>
+          <nameStr>Information</nameStr>
+          <coordinates>
+            <_>
+              212 374</_>
+            <_>
+              254 374</_>
+            <_>
+              254 413</_>
+            <_>
+              212 413</_></coordinates></_>
+        <_>
+          <nameStr>Information</nameStr>
+          <coordinates>
+            <_>
+              173 192</_>
+            <_>
+              313 192</_>
+            <_>
+              313 320</_>
+            <_>
+              173 320</_></coordinates></_>
+        <_>
+          <nameStr>Disabled</nameStr>
+          <coordinates>
+            <_>
+              642 183</_>
+            <_>
+              716 183</_>
+            <_>
+              716 256</_>
+            <_>
+              642 256</_></coordinates></_>
+        <_>
+          <nameStr>Disabled</nameStr>
+          <coordinates>
+            <_>
+              642 183</_>
+            <_>
+              716 183</_>
+            <_>
+              716 256</_>
+            <_>
+              642 256</_></coordinates></_>
+        <_>
+          <nameStr>Escalator</nameStr>
+          <coordinates>
+            <_>
+              539 181</_>
+            <_>
+              613 181</_>
+            <_>
+              613 255</_>
+            <_>
+              539 255</_></coordinates></_>
+        <_>
+          <nameStr>Escalator</nameStr>
+          <coordinates>
+            <_>
+              539 181</_>
+            <_>
+              613 181</_>
+            <_>
+              613 255</_>
+            <_>
+              539 255</_></coordinates></_>
+        <_>
+          <nameStr>Disabled</nameStr>
+          <coordinates>
+            <_>
+              736 189</_>
+            <_>
+              805 189</_>
+            <_>
+              805 258</_>
+            <_>
+              736 258</_></coordinates></_>
+        <_>
+          <nameStr>Disabled</nameStr>
+          <coordinates>
+            <_>
+              737 190</_>
+            <_>
+              804 190</_>
+            <_>
+              804 257</_>
+            <_>
+              737 257</_></coordinates></_>
+        <_>
+          <nameStr>Information</nameStr>
+          <coordinates>
+            <_>
+              232 174</_>
+            <_>
+              307 174</_>
+            <_>
+              307 250</_>
+            <_>
+              232 250</_></coordinates></_>
+        <_>
+          <nameStr>Information</nameStr>
+          <coordinates>
+            <_>
+              233 175</_>
+            <_>
+              307 175</_>
+            <_>
+              307 249</_>
+            <_>
+              233 249</_></coordinates></_>
+        <_>
+          <nameStr>Disabled</nameStr>
+          <coordinates>
+            <_>
+              429 174</_>
+            <_>
+              512 174</_>
+            <_>
+              512 257</_>
+            <_>
+              429 257</_></coordinates></_>
+        <_>
+          <nameStr>Disabled</nameStr>
+          <coordinates>
+            <_>
+              429 174</_>
+            <_>
+              512 174</_>
+            <_>
+              512 257</_>
+            <_>
+              429 257</_></coordinates></_>
+        <_>
+          <nameStr>Disabled</nameStr>
+          <coordinates>
+            <_>
+              433 179</_>
+            <_>
+              508 179</_>
+            <_>
+              508 253</_>
+            <_>
+              433 253</_></coordinates></_>
+        <_>
+          <nameStr>Disabled</nameStr>
+          <coordinates>
+            <_>
+              433 179</_>
+            <_>
+              508 179</_>
+            <_>
+              508 253</_>
+            <_>
+              433 253</_></coordinates></_>
+        <_>
+          <nameStr>Gents</nameStr>
+          <coordinates>
+            <_>
+              458 205</_>
+            <_>
+              484 205</_>
+            <_>
+              484 247</_>
+            <_>
+              458 247</_></coordinates></_>
+        <_>
+          <nameStr>Disabled</nameStr>
+          <coordinates>
+            <_>
+              322 171</_>
+            <_>
+              411 171</_>
+            <_>
+              411 257</_>
+            <_>
+              322 257</_></coordinates></_>
+        <_>
+          <nameStr>Disabled</nameStr>
+          <coordinates>
+            <_>
+              322 171</_>
+            <_>
+              411 171</_>
+            <_>
+              411 257</_>
+            <_>
+              322 257</_></coordinates></_>
+        <_>
+          <nameStr>Disabled</nameStr>
+          <coordinates>
+            <_>
+              327 175</_>
+            <_>
+              405 175</_>
+            <_>
+              405 251</_>
+            <_>
+              327 251</_></coordinates></_>
+        <_>
+          <nameStr>Disabled</nameStr>
+          <coordinates>
+            <_>
+              327 175</_>
+            <_>
+              405 175</_>
+            <_>
+              405 251</_>
+            <_>
+              327 251</_></coordinates></_>
+        <_>
+          <nameStr>Disabled</nameStr>
+          <coordinates>
+            <_>
+              334 184</_>
+            <_>
+              402 184</_>
+            <_>
+              402 244</_>
+            <_>
+              334 244</_></coordinates></_>
+        <_>
+          <nameStr>Disabled</nameStr>
+          <coordinates>
+            <_>
+              334 184</_>
+            <_>
+              402 184</_>
+            <_>
+              402 244</_>
+            <_>
+              334 244</_></coordinates></_></Objects></_>
+    <_>
+      <Filename>"Blue Signs/Testing/Blue034.jpg"</Filename>
+      <Objects>
+        <_>
+          <nameStr>Lift</nameStr>
+          <coordinates>
+            <_>
+              431 352</_>
+            <_>
+              482 352</_>
+            <_>
+              482 402</_>
+            <_>
+              431 402</_></coordinates></_>
+        <_>
+          <nameStr>Lift</nameStr>
+          <coordinates>
+            <_>
+              431 351</_>
+            <_>
+              482 351</_>
+            <_>
+              482 402</_>
+            <_>
+              431 402</_></coordinates></_>
+        <_>
+          <nameStr>Lift</nameStr>
+          <coordinates>
+            <_>
+              492 350</_>
+            <_>
+              543 350</_>
+            <_>
+              543 402</_>
+            <_>
+              492 402</_></coordinates></_>
+        <_>
+          <nameStr>TicketDesk</nameStr>
+          <coordinates>
+            <_>
+              550 346</_>
+            <_>
+              610 346</_>
+            <_>
+              610 405</_>
+            <_>
+              550 405</_></coordinates></_>
+        <_>
+          <nameStr>Exit</nameStr>
+          <coordinates>
+            <_>
+              553 349</_>
+            <_>
+              606 349</_>
+            <_>
+              606 401</_>
+            <_>
+              553 401</_></coordinates></_>
+        <_>
+          <nameStr>Disabled</nameStr>
+          <coordinates>
+            <_>
+              613 345</_>
+            <_>
+              675 345</_>
+            <_>
+              675 405</_>
+            <_>
+              613 405</_></coordinates></_>
+        <_>
+          <nameStr>Disabled</nameStr>
+          <coordinates>
+            <_>
+              613 345</_>
+            <_>
+              675 345</_>
+            <_>
+              675 405</_>
+            <_>
+              613 405</_></coordinates></_>
+        <_>
+          <nameStr>Gents</nameStr>
+          <coordinates>
+            <_>
+              616 348</_>
+            <_>
+              671 348</_>
+            <_>
+              671 401</_>
+            <_>
+              616 401</_></coordinates></_>
+        <_>
+          <nameStr>Two</nameStr>
+          <coordinates>
+            <_>
+              617 349</_>
+            <_>
+              671 349</_>
+            <_>
+              671 401</_>
+            <_>
+              617 401</_></coordinates></_></Objects></_>
+    <_>
+      <Filename>"Blue Signs/Testing/Blue035.jpg"</Filename>
+      <Objects>
+        <_>
+          <nameStr>Disabled</nameStr>
+          <coordinates>
+            <_>
+              46 263</_>
+            <_>
+              131 263</_>
+            <_>
+              131 346</_>
+            <_>
+              46 346</_></coordinates></_>
+        <_>
+          <nameStr>Ladies</nameStr>
+          <coordinates>
+            <_>
+              64 276</_>
+            <_>
+              124 276</_>
+            <_>
+              124 335</_>
+            <_>
+              64 335</_></coordinates></_>
+        <_>
+          <nameStr>Ladies</nameStr>
+          <coordinates>
+            <_>
+              64 276</_>
+            <_>
+              124 276</_>
+            <_>
+              124 335</_>
+            <_>
+              64 335</_></coordinates></_>
+        <_>
+          <nameStr>Exit</nameStr>
+          <coordinates>
+            <_>
+              68 280</_>
+            <_>
+              120 280</_>
+            <_>
+              120 331</_>
+            <_>
+              68 331</_></coordinates></_>
+        <_>
+          <nameStr>Exit</nameStr>
+          <coordinates>
+            <_>
+              68 280</_>
+            <_>
+              120 280</_>
+            <_>
+              120 331</_>
+            <_>
+              68 331</_></coordinates></_>
+        <_>
+          <nameStr>Exit</nameStr>
+          <coordinates>
+            <_>
+              66 285</_>
+            <_>
+              113 285</_>
+            <_>
+              113 334</_>
+            <_>
+              66 334</_></coordinates></_>
+        <_>
+          <nameStr>Disabled</nameStr>
+          <coordinates>
+            <_>
+              199 244</_>
+            <_>
+              303 244</_>
+            <_>
+              303 345</_>
+            <_>
+              199 345</_></coordinates></_>
+        <_>
+          <nameStr>Disabled</nameStr>
+          <coordinates>
+            <_>
+              199 252</_>
+            <_>
+              294 252</_>
+            <_>
+              294 345</_>
+            <_>
+              199 345</_></coordinates></_>
+        <_>
+          <nameStr>Two</nameStr>
+          <coordinates>
+            <_>
+              213 272</_>
+            <_>
+              272 272</_>
+            <_>
+              272 333</_>
+            <_>
+              213 333</_></coordinates></_>
+        <_>
+          <nameStr>Two</nameStr>
+          <coordinates>
+            <_>
+              213 272</_>
+            <_>
+              272 272</_>
+            <_>
+              272 333</_>
+            <_>
+              213 333</_></coordinates></_>
+        <_>
+          <nameStr>Two</nameStr>
+          <coordinates>
+            <_>
+              217 278</_>
+            <_>
+              268 278</_>
+            <_>
+              268 329</_>
+            <_>
+              217 329</_></coordinates></_>
+        <_>
+          <nameStr>Two</nameStr>
+          <coordinates>
+            <_>
+              217 277</_>
+            <_>
+              268 277</_>
+            <_>
+              268 329</_>
+            <_>
+              217 329</_></coordinates></_>
+        <_>
+          <nameStr>Disabled</nameStr>
+          <coordinates>
+            <_>
+              598 200</_>
+            <_>
+              645 200</_>
+            <_>
+              645 246</_>
+            <_>
+              598 246</_></coordinates></_>
+        <_>
+          <nameStr>Disabled</nameStr>
+          <coordinates>
+            <_>
+              598 200</_>
+            <_>
+              645 200</_>
+            <_>
+              645 246</_>
+            <_>
+              598 246</_></coordinates></_>
+        <_>
+          <nameStr>Disabled</nameStr>
+          <coordinates>
+            <_>
+              602 203</_>
+            <_>
+              642 203</_>
+            <_>
+              642 242</_>
+            <_>
+              602 242</_></coordinates></_>
+        <_>
+          <nameStr>Disabled</nameStr>
+          <coordinates>
+            <_>
+              602 203</_>
+            <_>
+              642 203</_>
+            <_>
+              642 242</_>
+            <_>
+              602 242</_></coordinates></_>
+        <_>
+          <nameStr>Disabled</nameStr>
+          <coordinates>
+            <_>
+              658 198</_>
+            <_>
+              707 198</_>
+            <_>
+              707 244</_>
+            <_>
+              658 244</_></coordinates></_>
+        <_>
+          <nameStr>Disabled</nameStr>
+          <coordinates>
+            <_>
+              659 198</_>
+            <_>
+              707 198</_>
+            <_>
+              707 244</_>
+            <_>
+              659 244</_></coordinates></_>
+        <_>
+          <nameStr>Two</nameStr>
+          <coordinates>
+            <_>
+              663 202</_>
+            <_>
+              703 202</_>
+            <_>
+              703 241</_>
+            <_>
+              663 241</_></coordinates></_>
+        <_>
+          <nameStr>Two</nameStr>
+          <coordinates>
+            <_>
+              663 202</_>
+            <_>
+              703 202</_>
+            <_>
+              703 241</_>
+            <_>
+              663 241</_></coordinates></_>
+        <_>
+          <nameStr>Disabled</nameStr>
+          <coordinates>
+            <_>
+              721 199</_>
+            <_>
+              765 199</_>
+            <_>
+              765 241</_>
+            <_>
+              721 241</_></coordinates></_>
+        <_>
+          <nameStr>Disabled</nameStr>
+          <coordinates>
+            <_>
+              721 199</_>
+            <_>
+              765 199</_>
+            <_>
+              765 241</_>
+            <_>
+              721 241</_></coordinates></_>
+        <_>
+          <nameStr>TicketDesk</nameStr>
+          <coordinates>
+            <_>
+              841 192</_>
+            <_>
+              894 192</_>
+            <_>
+              894 242</_>
+            <_>
+              841 242</_></coordinates></_>
+        <_>
+          <nameStr>TicketDesk</nameStr>
+          <coordinates>
+            <_>
+              841 192</_>
+            <_>
+              894 192</_>
+            <_>
+              894 242</_>
+            <_>
+              841 242</_></coordinates></_>
+        <_>
+          <nameStr>Disabled</nameStr>
+          <coordinates>
+            <_>
+              846 197</_>
+            <_>
+              889 197</_>
+            <_>
+              889 237</_>
+            <_>
+              846 237</_></coordinates></_>
+        <_>
+          <nameStr>Disabled</nameStr>
+          <coordinates>
+            <_>
+              846 197</_>
+            <_>
+              889 197</_>
+            <_>
+              889 237</_>
+            <_>
+              846 237</_></coordinates></_></Objects></_>
+    <_>
+      <Filename>"Blue Signs/Testing/Blue036.jpg"</Filename>
+      <Objects>
+        <_>
+          <nameStr>Ladies</nameStr>
+          <coordinates>
+            <_>
+              278 350</_>
+            <_>
+              311 350</_>
+            <_>
+              311 386</_>
+            <_>
+              278 386</_></coordinates></_>
+        <_>
+          <nameStr>Ladies</nameStr>
+          <coordinates>
+            <_>
+              278 350</_>
+            <_>
+              311 350</_>
+            <_>
+              311 386</_>
+            <_>
+              278 386</_></coordinates></_>
+        <_>
+          <nameStr>Disabled</nameStr>
+          <coordinates>
+            <_>
+              337 324</_>
+            <_>
+              389 324</_>
+            <_>
+              389 368</_>
+            <_>
+              337 368</_></coordinates></_>
+        <_>
+          <nameStr>Disabled</nameStr>
+          <coordinates>
+            <_>
+              337 324</_>
+            <_>
+              386 324</_>
+            <_>
+              386 368</_>
+            <_>
+              337 368</_></coordinates></_>
+        <_>
+          <nameStr>Disabled</nameStr>
+          <coordinates>
+            <_>
+              341 328</_>
+            <_>
+              377 328</_>
+            <_>
+              377 365</_>
+            <_>
+              341 365</_></coordinates></_>
+        <_>
+          <nameStr>Stairs</nameStr>
+          <coordinates>
+            <_>
+              719 262</_>
+            <_>
+              807 262</_>
+            <_>
+              807 337</_>
+            <_>
+              719 337</_></coordinates></_>
+        <_>
+          <nameStr>Gents</nameStr>
+          <coordinates>
+            <_>
+              557 208</_>
+            <_>
+              726 208</_>
+            <_>
+              726 362</_>
+            <_>
+              557 362</_></coordinates></_>
+        <_>
+          <nameStr>Disabled</nameStr>
+          <coordinates>
+            <_>
+              455 180</_>
+            <_>
+              507 180</_>
+            <_>
+              507 232</_>
+            <_>
+              455 232</_></coordinates></_>
+        <_>
+          <nameStr>Disabled</nameStr>
+          <coordinates>
+            <_>
+              456 181</_>
+            <_>
+              506 181</_>
+            <_>
+              506 230</_>
+            <_>
+              456 230</_></coordinates></_>
+        <_>
+          <nameStr>Disabled</nameStr>
+          <coordinates>
+            <_>
+              531 177</_>
+            <_>
+              591 177</_>
+            <_>
+              591 237</_>
+            <_>
+              531 237</_></coordinates></_>
+        <_>
+          <nameStr>Disabled</nameStr>
+          <coordinates>
+            <_>
+              531 177</_>
+            <_>
+              591 177</_>
+            <_>
+              591 237</_>
+            <_>
+              531 237</_></coordinates></_>
+        <_>
+          <nameStr>Disabled</nameStr>
+          <coordinates>
+            <_>
+              534 180</_>
+            <_>
+              587 180</_>
+            <_>
+              587 233</_>
+            <_>
+              534 233</_></coordinates></_>
+        <_>
+          <nameStr>Disabled</nameStr>
+          <coordinates>
+            <_>
+              535 181</_>
+            <_>
+              587 181</_>
+            <_>
+              587 233</_>
+            <_>
+              535 233</_></coordinates></_>
+        <_>
+          <nameStr>Disabled</nameStr>
+          <coordinates>
+            <_>
+              609 176</_>
+            <_>
+              669 176</_>
+            <_>
+              669 236</_>
+            <_>
+              609 236</_></coordinates></_>
+        <_>
+          <nameStr>Disabled</nameStr>
+          <coordinates>
+            <_>
+              608 175</_>
+            <_>
+              669 175</_>
+            <_>
+              669 236</_>
+            <_>
+              608 236</_></coordinates></_>
+        <_>
+          <nameStr>Disabled</nameStr>
+          <coordinates>
+            <_>
+              612 179</_>
+            <_>
+              666 179</_>
+            <_>
+              666 232</_>
+            <_>
+              612 232</_></coordinates></_>
+        <_>
+          <nameStr>Disabled</nameStr>
+          <coordinates>
+            <_>
+              613 180</_>
+            <_>
+              666 180</_>
+            <_>
+              666 232</_>
+            <_>
+              613 232</_></coordinates></_></Objects></_>
+    <_>
+      <Filename>"Blue Signs/Testing/Blue037.jpg"</Filename>
+      <Objects>
+        <_>
+          <nameStr>Disabled</nameStr>
+          <coordinates>
+            <_>
+              511 325</_>
+            <_>
+              547 325</_>
+            <_>
+              547 361</_>
+            <_>
+              511 361</_></coordinates></_>
+        <_>
+          <nameStr>Disabled</nameStr>
+          <coordinates>
+            <_>
+              433 325</_>
+            <_>
+              472 325</_>
+            <_>
+              472 361</_>
+            <_>
+              433 361</_></coordinates></_>
+        <_>
+          <nameStr>Disabled</nameStr>
+          <coordinates>
+            <_>
+              474 323</_>
+            <_>
+              511 323</_>
+            <_>
+              511 362</_>
+            <_>
+              474 362</_></coordinates></_></Objects></_>
+    <_>
+      <Filename>"Blue Signs/Testing/Blue038.jpg"</Filename>
       <Objects>
         </Objects></_>
     <_>
-      <Filename>"Blue Signs/Smaller Testing/Blue034.jpg"</Filename>
+      <Filename>"Blue Signs/Testing/Blue042.jpg"</Filename>
       <Objects>
-        </Objects></_>
+        <_>
+          <nameStr>Disabled</nameStr>
+          <coordinates>
+            <_>
+              420 160</_>
+            <_>
+              474 160</_>
+            <_>
+              474 213</_>
+            <_>
+              420 213</_></coordinates></_>
+        <_>
+          <nameStr>Disabled</nameStr>
+          <coordinates>
+            <_>
+              421 161</_>
+            <_>
+              473 161</_>
+            <_>
+              473 212</_>
+            <_>
+              421 212</_></coordinates></_>
+        <_>
+          <nameStr>Disabled</nameStr>
+          <coordinates>
+            <_>
+              352 157</_>
+            <_>
+              410 157</_>
+            <_>
+              410 215</_>
+            <_>
+              352 215</_></coordinates></_>
+        <_>
+          <nameStr>Disabled</nameStr>
+          <coordinates>
+            <_>
+              352 157</_>
+            <_>
+              410 157</_>
+            <_>
+              410 215</_>
+            <_>
+              352 215</_></coordinates></_>
+        <_>
+          <nameStr>Two</nameStr>
+          <coordinates>
+            <_>
+              365 162</_>
+            <_>
+              397 162</_>
+            <_>
+              397 203</_>
+            <_>
+              365 203</_></coordinates></_>
+        <_>
+          <nameStr>Gents</nameStr>
+          <coordinates>
+            <_>
+              274 155</_>
+            <_>
+              331 155</_>
+            <_>
+              331 212</_>
+            <_>
+              274 212</_></coordinates></_>
+        <_>
+          <nameStr>Gents</nameStr>
+          <coordinates>
+            <_>
+              275 156</_>
+            <_>
+              331 156</_>
+            <_>
+              331 212</_>
+            <_>
+              275 212</_></coordinates></_>
+        <_>
+          <nameStr>Lift</nameStr>
+          <coordinates>
+            <_>
+              288 163</_>
+            <_>
+              318 163</_>
+            <_>
+              318 205</_>
+            <_>
+              288 205</_></coordinates></_>
+        <_>
+          <nameStr>Lift</nameStr>
+          <coordinates>
+            <_>
+              288 163</_>
+            <_>
+              318 163</_>
+            <_>
+              318 205</_>
+            <_>
+              288 205</_></coordinates></_>
+        <_>
+          <nameStr>Disabled</nameStr>
+          <coordinates>
+            <_>
+              663 112</_>
+            <_>
+              802 112</_>
+            <_>
+              802 244</_>
+            <_>
+              663 244</_></coordinates></_>
+        <_>
+          <nameStr>Disabled</nameStr>
+          <coordinates>
+            <_>
+              663 112</_>
+            <_>
+              800 112</_>
+            <_>
+              800 244</_>
+            <_>
+              663 244</_></coordinates></_>
+        <_>
+          <nameStr>Gents</nameStr>
+          <coordinates>
+            <_>
+              682 128</_>
+            <_>
+              784 128</_>
+            <_>
+              784 228</_>
+            <_>
+              682 228</_></coordinates></_>
+        <_>
+          <nameStr>Gents</nameStr>
+          <coordinates>
+            <_>
+              683 128</_>
+            <_>
+              784 128</_>
+            <_>
+              784 228</_>
+            <_>
+              683 228</_></coordinates></_>
+        <_>
+          <nameStr>Information</nameStr>
+          <coordinates>
+            <_>
+              688 133</_>
+            <_>
+              778 133</_>
+            <_>
+              778 224</_>
+            <_>
+              688 224</_></coordinates></_>
+        <_>
+          <nameStr>Information</nameStr>
+          <coordinates>
+            <_>
+              688 133</_>
+            <_>
+              778 133</_>
+            <_>
+              778 224</_>
+            <_>
+              688 224</_></coordinates></_></Objects></_>
     <_>
-      <Filename>"Blue Signs/Smaller Testing/Blue043.jpg"</Filename>
+      <Filename>"Blue Signs/Testing/Blue043.jpg"</Filename>
       <Objects>
-        </Objects></_>
+        <_>
+          <nameStr>Two</nameStr>
+          <coordinates>
+            <_>
+              602 199</_>
+            <_>
+              653 199</_>
+            <_>
+              653 251</_>
+            <_>
+              602 251</_></coordinates></_>
+        <_>
+          <nameStr>Two</nameStr>
+          <coordinates>
+            <_>
+              603 200</_>
+            <_>
+              652 200</_>
+            <_>
+              652 249</_>
+            <_>
+              603 249</_></coordinates></_>
+        <_>
+          <nameStr>Disabled</nameStr>
+          <coordinates>
+            <_>
+              525 199</_>
+            <_>
+              580 199</_>
+            <_>
+              580 255</_>
+            <_>
+              525 255</_></coordinates></_></Objects></_>
     <_>
-      <Filename>"Blue Signs/Smaller Testing/Blue044.jpg"</Filename>
+      <Filename>"Blue Signs/Testing/Blue044.jpg"</Filename>
       <Objects>
-        </Objects></_>
+        <_>
+          <nameStr>Disabled</nameStr>
+          <coordinates>
+            <_>
+              417 235</_>
+            <_>
+              483 235</_>
+            <_>
+              483 312</_>
+            <_>
+              417 312</_></coordinates></_>
+        <_>
+          <nameStr>TicketDesk</nameStr>
+          <coordinates>
+            <_>
+              562 178</_>
+            <_>
+              619 178</_>
+            <_>
+              619 236</_>
+            <_>
+              562 236</_></coordinates></_></Objects></_>
     <_>
-      <Filename>"Blue Signs/Smaller Testing/Blue047.jpg"</Filename>
+      <Filename>"Blue Signs/Testing/Blue045.jpg"</Filename>
       <Objects>
-        </Objects></_></ImagesAndObjects></AnnotatedImages>
+        <_>
+          <nameStr>TicketDesk</nameStr>
+          <coordinates>
+            <_>
+              92 222</_>
+            <_>
+              140 222</_>
+            <_>
+              140 271</_>
+            <_>
+              92 271</_></coordinates></_>
+        <_>
+          <nameStr>Gents</nameStr>
+          <coordinates>
+            <_>
+              427 196</_>
+            <_>
+              545 196</_>
+            <_>
+              545 345</_>
+            <_>
+              427 345</_></coordinates></_>
+        <_>
+          <nameStr>Gents</nameStr>
+          <coordinates>
+            <_>
+              427 196</_>
+            <_>
+              545 196</_>
+            <_>
+              545 345</_>
+            <_>
+              427 345</_></coordinates></_>
+        <_>
+          <nameStr>Gents</nameStr>
+          <coordinates>
+            <_>
+              434 204</_>
+            <_>
+              540 204</_>
+            <_>
+              540 337</_>
+            <_>
+              434 337</_></coordinates></_>
+        <_>
+          <nameStr>Gents</nameStr>
+          <coordinates>
+            <_>
+              434 204</_>
+            <_>
+              540 204</_>
+            <_>
+              540 337</_>
+            <_>
+              434 337</_></coordinates></_></Objects></_>
+    <_>
+      <Filename>"Blue Signs/Testing/Blue046.jpg"</Filename>
+      <Objects>
+        <_>
+          <nameStr>TicketDesk</nameStr>
+          <coordinates>
+            <_>
+              150 579</_>
+            <_>
+              217 579</_>
+            <_>
+              217 628</_>
+            <_>
+              150 628</_></coordinates></_>
+        <_>
+          <nameStr>Information</nameStr>
+          <coordinates>
+            <_>
+              13 336</_>
+            <_>
+              90 336</_>
+            <_>
+              90 413</_>
+            <_>
+              13 413</_></coordinates></_>
+        <_>
+          <nameStr>Information</nameStr>
+          <coordinates>
+            <_>
+              14 337</_>
+            <_>
+              89 337</_>
+            <_>
+              89 412</_>
+            <_>
+              14 412</_></coordinates></_>
+        <_>
+          <nameStr>Two</nameStr>
+          <coordinates>
+            <_>
+              268 316</_>
+            <_>
+              375 316</_>
+            <_>
+              375 404</_>
+            <_>
+              268 404</_></coordinates></_>
+        <_>
+          <nameStr>Two</nameStr>
+          <coordinates>
+            <_>
+              268 316</_>
+            <_>
+              375 316</_>
+            <_>
+              375 404</_>
+            <_>
+              268 404</_></coordinates></_>
+        <_>
+          <nameStr>Lift</nameStr>
+          <coordinates>
+            <_>
+              270 319</_>
+            <_>
+              373 319</_>
+            <_>
+              373 401</_>
+            <_>
+              270 401</_></coordinates></_>
+        <_>
+          <nameStr>Lift</nameStr>
+          <coordinates>
+            <_>
+              270 319</_>
+            <_>
+              373 319</_>
+            <_>
+              373 401</_>
+            <_>
+              270 401</_></coordinates></_>
+        <_>
+          <nameStr>Lift</nameStr>
+          <coordinates>
+            <_>
+              300 348</_>
+            <_>
+              338 348</_>
+            <_>
+              338 380</_>
+            <_>
+              300 380</_></coordinates></_>
+        <_>
+          <nameStr>Lift</nameStr>
+          <coordinates>
+            <_>
+              300 348</_>
+            <_>
+              338 348</_>
+            <_>
+              338 380</_>
+            <_>
+              300 380</_></coordinates></_>
+        <_>
+          <nameStr>Two</nameStr>
+          <coordinates>
+            <_>
+              396 308</_>
+            <_>
+              504 308</_>
+            <_>
+              504 399</_>
+            <_>
+              396 399</_></coordinates></_>
+        <_>
+          <nameStr>Two</nameStr>
+          <coordinates>
+            <_>
+              396 308</_>
+            <_>
+              504 308</_>
+            <_>
+              504 399</_>
+            <_>
+              396 399</_></coordinates></_>
+        <_>
+          <nameStr>Two</nameStr>
+          <coordinates>
+            <_>
+              526 300</_>
+            <_>
+              635 300</_>
+            <_>
+              635 392</_>
+            <_>
+              526 392</_></coordinates></_>
+        <_>
+          <nameStr>Two</nameStr>
+          <coordinates>
+            <_>
+              526 300</_>
+            <_>
+              635 300</_>
+            <_>
+              635 392</_>
+            <_>
+              526 392</_></coordinates></_>
+        <_>
+          <nameStr>Lift</nameStr>
+          <coordinates>
+            <_>
+              531 305</_>
+            <_>
+              629 305</_>
+            <_>
+              629 388</_>
+            <_>
+              531 388</_></coordinates></_>
+        <_>
+          <nameStr>Lift</nameStr>
+          <coordinates>
+            <_>
+              531 305</_>
+            <_>
+              629 305</_>
+            <_>
+              629 388</_>
+            <_>
+              531 388</_></coordinates></_></Objects></_>
+    <_>
+      <Filename>"Blue Signs/Testing/Blue047.jpg"</Filename>
+      <Objects>
+        <_>
+          <nameStr>Coffee</nameStr>
+          <coordinates>
+            <_>
+              508 266</_>
+            <_>
+              707 266</_>
+            <_>
+              707 463</_>
+            <_>
+              508 463</_></coordinates></_>
+        <_>
+          <nameStr>Coffee</nameStr>
+          <coordinates>
+            <_>
+              508 266</_>
+            <_>
+              707 266</_>
+            <_>
+              707 463</_>
+            <_>
+              508 463</_></coordinates></_>
+        <_>
+          <nameStr>Coffee</nameStr>
+          <coordinates>
+            <_>
+              513 271</_>
+            <_>
+              701 271</_>
+            <_>
+              701 458</_>
+            <_>
+              513 458</_></coordinates></_>
+        <_>
+          <nameStr>Coffee</nameStr>
+          <coordinates>
+            <_>
+              513 271</_>
+            <_>
+              701 271</_>
+            <_>
+              701 458</_>
+            <_>
+              513 458</_></coordinates></_>
+        <_>
+          <nameStr>Coffee</nameStr>
+          <coordinates>
+            <_>
+              579 318</_>
+            <_>
+              676 318</_>
+            <_>
+              676 414</_>
+            <_>
+              579 414</_></coordinates></_>
+        <_>
+          <nameStr>Coffee</nameStr>
+          <coordinates>
+            <_>
+              580 319</_>
+            <_>
+              675 319</_>
+            <_>
+              675 413</_>
+            <_>
+              580 413</_></coordinates></_>
+        <_>
+          <nameStr>Coffee</nameStr>
+          <coordinates>
+            <_>
+              540 294</_>
+            <_>
+              657 294</_>
+            <_>
+              657 434</_>
+            <_>
+              540 434</_></coordinates></_>
+        <_>
+          <nameStr>Coffee</nameStr>
+          <coordinates>
+            <_>
+              540 294</_>
+            <_>
+              657 294</_>
+            <_>
+              657 434</_>
+            <_>
+              540 434</_></coordinates></_>
+        <_>
+          <nameStr>Exit</nameStr>
+          <coordinates>
+            <_>
+              740 259</_>
+            <_>
+              963 259</_>
+            <_>
+              963 473</_>
+            <_>
+              740 473</_></coordinates></_>
+        <_>
+          <nameStr>Exit</nameStr>
+          <coordinates>
+            <_>
+              740 259</_>
+            <_>
+              963 259</_>
+            <_>
+              963 473</_>
+            <_>
+              740 473</_></coordinates></_>
+        <_>
+          <nameStr>Exit</nameStr>
+          <coordinates>
+            <_>
+              877 313</_>
+            <_>
+              913 313</_>
+            <_>
+              913 347</_>
+            <_>
+              877 347</_></coordinates></_>
+        <_>
+          <nameStr>Exit</nameStr>
+          <coordinates>
+            <_>
+              877 313</_>
+            <_>
+              913 313</_>
+            <_>
+              913 347</_>
+            <_>
+              877 347</_></coordinates></_>
+        <_>
+          <nameStr>Exit</nameStr>
+          <coordinates>
+            <_>
+              745 266</_>
+            <_>
+              957 266</_>
+            <_>
+              957 467</_>
+            <_>
+              745 467</_></coordinates></_>
+        <_>
+          <nameStr>Coffee</nameStr>
+          <coordinates>
+            <_>
+              293 232</_>
+            <_>
+              473 232</_>
+            <_>
+              473 454</_>
+            <_>
+              293 454</_></coordinates></_>
+        <_>
+          <nameStr>Coffee</nameStr>
+          <coordinates>
+            <_>
+              293 233</_>
+            <_>
+              473 233</_>
+            <_>
+              473 454</_>
+            <_>
+              293 454</_></coordinates></_>
+        <_>
+          <nameStr>Coffee</nameStr>
+          <coordinates>
+            <_>
+              297 272</_>
+            <_>
+              468 272</_>
+            <_>
+              468 449</_>
+            <_>
+              297 449</_></coordinates></_>
+        <_>
+          <nameStr>Coffee</nameStr>
+          <coordinates>
+            <_>
+              297 272</_>
+            <_>
+              468 272</_>
+            <_>
+              468 449</_>
+            <_>
+              297 449</_></coordinates></_></Objects></_>
+    <_>
+      <Filename>"Blue Signs/Testing/Blue048.jpg"</Filename>
+      <Objects>
+        <_>
+          <nameStr>Disabled</nameStr>
+          <coordinates>
+            <_>
+              398 321</_>
+            <_>
+              442 321</_>
+            <_>
+              442 365</_>
+            <_>
+              398 365</_></coordinates></_>
+        <_>
+          <nameStr>Disabled</nameStr>
+          <coordinates>
+            <_>
+              398 321</_>
+            <_>
+              442 321</_>
+            <_>
+              442 365</_>
+            <_>
+              398 365</_></coordinates></_>
+        <_>
+          <nameStr>Disabled</nameStr>
+          <coordinates>
+            <_>
+              401 324</_>
+            <_>
+              439 324</_>
+            <_>
+              439 361</_>
+            <_>
+              401 361</_></coordinates></_>
+        <_>
+          <nameStr>Disabled</nameStr>
+          <coordinates>
+            <_>
+              401 324</_>
+            <_>
+              439 324</_>
+            <_>
+              439 361</_>
+            <_>
+              401 361</_></coordinates></_>
+        <_>
+          <nameStr>Gents</nameStr>
+          <coordinates>
+            <_>
+              535 222</_>
+            <_>
+              616 222</_>
+            <_>
+              616 304</_>
+            <_>
+              535 304</_></coordinates></_>
+        <_>
+          <nameStr>Gents</nameStr>
+          <coordinates>
+            <_>
+              535 222</_>
+            <_>
+              616 222</_>
+            <_>
+              616 304</_>
+            <_>
+              535 304</_></coordinates></_>
+        <_>
+          <nameStr>Gents</nameStr>
+          <coordinates>
+            <_>
+              531 212</_>
+            <_>
+              631 212</_>
+            <_>
+              631 307</_>
+            <_>
+              531 307</_></coordinates></_>
+        <_>
+          <nameStr>Gents</nameStr>
+          <coordinates>
+            <_>
+              516 142</_>
+            <_>
+              632 142</_>
+            <_>
+              632 318</_>
+            <_>
+              516 318</_></coordinates></_></Objects></_>
+    <_>
+      <Filename>"Blue Signs/Testing/Blue050.jpg"</Filename>
+      <Objects>
+        <_>
+          <nameStr>Exit</nameStr>
+          <coordinates>
+            <_>
+              309 355</_>
+            <_>
+              430 355</_>
+            <_>
+              430 451</_>
+            <_>
+              309 451</_></coordinates></_>
+        <_>
+          <nameStr>Exit</nameStr>
+          <coordinates>
+            <_>
+              309 355</_>
+            <_>
+              430 355</_>
+            <_>
+              430 451</_>
+            <_>
+              309 451</_></coordinates></_>
+        <_>
+          <nameStr>Exit</nameStr>
+          <coordinates>
+            <_>
+              315 360</_>
+            <_>
+              424 360</_>
+            <_>
+              424 445</_>
+            <_>
+              315 445</_></coordinates></_>
+        <_>
+          <nameStr>Exit</nameStr>
+          <coordinates>
+            <_>
+              315 360</_>
+            <_>
+              424 360</_>
+            <_>
+              424 445</_>
+            <_>
+              315 445</_></coordinates></_>
+        <_>
+          <nameStr>Exit</nameStr>
+          <coordinates>
+            <_>
+              406 340</_>
+            <_>
+              529 340</_>
+            <_>
+              529 439</_>
+            <_>
+              406 439</_></coordinates></_>
+        <_>
+          <nameStr>Exit</nameStr>
+          <coordinates>
+            <_>
+              406 340</_>
+            <_>
+              529 340</_>
+            <_>
+              529 439</_>
+            <_>
+              406 439</_></coordinates></_>
+        <_>
+          <nameStr>Exit</nameStr>
+          <coordinates>
+            <_>
+              431 370</_>
+            <_>
+              498 370</_>
+            <_>
+              498 420</_>
+            <_>
+              431 420</_></coordinates></_>
+        <_>
+          <nameStr>Exit</nameStr>
+          <coordinates>
+            <_>
+              431 370</_>
+            <_>
+              498 370</_>
+            <_>
+              498 420</_>
+            <_>
+              431 420</_></coordinates></_>
+        <_>
+          <nameStr>Exit</nameStr>
+          <coordinates>
+            <_>
+              446 376</_>
+            <_>
+              483 376</_>
+            <_>
+              483 410</_>
+            <_>
+              446 410</_></coordinates></_>
+        <_>
+          <nameStr>Information</nameStr>
+          <coordinates>
+            <_>
+              518 329</_>
+            <_>
+              632 329</_>
+            <_>
+              632 421</_>
+            <_>
+              518 421</_></coordinates></_>
+        <_>
+          <nameStr>Information</nameStr>
+          <coordinates>
+            <_>
+              518 329</_>
+            <_>
+              632 329</_>
+            <_>
+              632 421</_>
+            <_>
+              518 421</_></coordinates></_>
+        <_>
+          <nameStr>Exit</nameStr>
+          <coordinates>
+            <_>
+              512 324</_>
+            <_>
+              638 324</_>
+            <_>
+              638 426</_>
+            <_>
+              512 426</_></coordinates></_>
+        <_>
+          <nameStr>Disabled</nameStr>
+          <coordinates>
+            <_>
+              769 299</_>
+            <_>
+              860 299</_>
+            <_>
+              860 389</_>
+            <_>
+              769 389</_></coordinates></_>
+        <_>
+          <nameStr>Disabled</nameStr>
+          <coordinates>
+            <_>
+              766 299</_>
+            <_>
+              858 299</_>
+            <_>
+              858 390</_>
+            <_>
+              766 390</_></coordinates></_>
+        <_>
+          <nameStr>Gents</nameStr>
+          <coordinates>
+            <_>
+              627 306</_>
+            <_>
+              757 306</_>
+            <_>
+              757 413</_>
+            <_>
+              627 413</_></coordinates></_>
+        <_>
+          <nameStr>Gents</nameStr>
+          <coordinates>
+            <_>
+              628 306</_>
+            <_>
+              757 306</_>
+            <_>
+              757 413</_>
+            <_>
+              628 413</_></coordinates></_>
+        <_>
+          <nameStr>Disabled</nameStr>
+          <coordinates>
+            <_>
+              633 311</_>
+            <_>
+              751 311</_>
+            <_>
+              751 408</_>
+            <_>
+              633 408</_></coordinates></_>
+        <_>
+          <nameStr>Disabled</nameStr>
+          <coordinates>
+            <_>
+              633 311</_>
+            <_>
+              751 311</_>
+            <_>
+              751 408</_>
+            <_>
+              633 408</_></coordinates></_></Objects></_>
+    <_>
+      <Filename>"Blue Signs/Testing/Blue051.jpg"</Filename>
+      <Objects>
+        <_>
+          <nameStr>Gents</nameStr>
+          <coordinates>
+            <_>
+              475 235</_>
+            <_>
+              543 235</_>
+            <_>
+              543 306</_>
+            <_>
+              475 306</_></coordinates></_>
+        <_>
+          <nameStr>Gents</nameStr>
+          <coordinates>
+            <_>
+              475 235</_>
+            <_>
+              543 235</_>
+            <_>
+              543 306</_>
+            <_>
+              475 306</_></coordinates></_>
+        <_>
+          <nameStr>Gents</nameStr>
+          <coordinates>
+            <_>
+              479 240</_>
+            <_>
+              538 240</_>
+            <_>
+              538 302</_>
+            <_>
+              479 302</_></coordinates></_>
+        <_>
+          <nameStr>Gents</nameStr>
+          <coordinates>
+            <_>
+              479 240</_>
+            <_>
+              538 240</_>
+            <_>
+              538 302</_>
+            <_>
+              479 302</_></coordinates></_>
+        <_>
+          <nameStr>Disabled</nameStr>
+          <coordinates>
+            <_>
+              544 232</_>
+            <_>
+              619 232</_>
+            <_>
+              619 305</_>
+            <_>
+              544 305</_></coordinates></_>
+        <_>
+          <nameStr>Disabled</nameStr>
+          <coordinates>
+            <_>
+              544 232</_>
+            <_>
+              619 232</_>
+            <_>
+              619 305</_>
+            <_>
+              544 305</_></coordinates></_>
+        <_>
+          <nameStr>Disabled</nameStr>
+          <coordinates>
+            <_>
+              551 237</_>
+            <_>
+              612 237</_>
+            <_>
+              612 300</_>
+            <_>
+              551 300</_></coordinates></_>
+        <_>
+          <nameStr>Disabled</nameStr>
+          <coordinates>
+            <_>
+              551 237</_>
+            <_>
+              612 237</_>
+            <_>
+              612 300</_>
+            <_>
+              551 300</_></coordinates></_>
+        <_>
+          <nameStr>Escalator</nameStr>
+          <coordinates>
+            <_>
+              671 226</_>
+            <_>
+              749 226</_>
+            <_>
+              749 301</_>
+            <_>
+              671 301</_></coordinates></_>
+        <_>
+          <nameStr>Escalator</nameStr>
+          <coordinates>
+            <_>
+              671 226</_>
+            <_>
+              749 226</_>
+            <_>
+              749 301</_>
+            <_>
+              671 301</_></coordinates></_>
+        <_>
+          <nameStr>Escalator</nameStr>
+          <coordinates>
+            <_>
+              676 231</_>
+            <_>
+              742 231</_>
+            <_>
+              742 296</_>
+            <_>
+              676 296</_></coordinates></_>
+        <_>
+          <nameStr>Escalator</nameStr>
+          <coordinates>
+            <_>
+              677 231</_>
+            <_>
+              742 231</_>
+            <_>
+              742 296</_>
+            <_>
+              677 296</_></coordinates></_>
+        <_>
+          <nameStr>Escalator</nameStr>
+          <coordinates>
+            <_>
+              757 227</_>
+            <_>
+              827 227</_>
+            <_>
+              827 295</_>
+            <_>
+              757 295</_></coordinates></_>
+        <_>
+          <nameStr>Escalator</nameStr>
+          <coordinates>
+            <_>
+              757 227</_>
+            <_>
+              827 227</_>
+            <_>
+              827 295</_>
+            <_>
+              757 295</_></coordinates></_></Objects></_></ImagesAndObjects></AnnotatedImages>
 </opencv_storage>

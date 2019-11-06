@@ -83,7 +83,7 @@ private:
 	void GetRotatedBoxes(Mat image, vector<RotatedRect>& result, bool isDrawBoxes, string name);
 	float euclideanDist(Point a, Point b);
 	void GetSquares(Mat image, vector<vector<Point>>& squares);
-	bool tryMatch(Mat image, AnnotatedImages& training_images, double hist_threshold, double template_threshold);
+	string tryMatch(Mat image, AnnotatedImages& training_images, double hist_threshold, double template_threshold);
 };
 
 class ConfusionMatrix;
@@ -518,7 +518,7 @@ void MyApplication()
 	imwrite("AllGroundTruthObjectImages.jpg", image_of_all_ground_truth_objects);*/
 	ch = cv::waitKey(1);
 
-	AnnotatedImages unknownImages("Blue Signs/Smaller Testing");
+	AnnotatedImages unknownImages("Blue Signs/Testing");
 	unknownImages.LocateAndAddAllObjects(trainingImages);
 	FileStorage unknowns_file("BlueSignsTesting.xml", FileStorage::WRITE);
 	if (!unknowns_file.isOpened())
@@ -903,22 +903,36 @@ void ImageWithBlueSignObjects::LocateAndAddAllObjects(AnnotatedImages& training_
 		try
 		{
 			Mat object = smaller_image(boundingBox);
+			string matched = tryMatch(object, training_images, 0.3, 0.65);
 
-			if (tryMatch(object, training_images, 0.3, 0.65))
+			if (matched != "")
 			{
-				imshow(this->filename + " i " + to_string(i), object);
+				//imshow(this->filename + " i " + to_string(i), object);
+				int top_left_col = boundingBox.x;
+				int top_left_row = boundingBox.y;
+
+				int top_right_col = boundingBox.x + boundingBox.width;
+				int top_right_row = boundingBox.y;
+
+				int bottom_right_col = boundingBox.x + boundingBox.width;
+				int bottom_right_row = boundingBox.y + boundingBox.height;
+
+				int bottom_left_col = boundingBox.x;
+				int bottom_left_row = boundingBox.y + boundingBox.height;
+
+				addObject(matched, top_left_col, top_left_row, top_right_col, top_left_row, bottom_right_col, bottom_right_row, bottom_left_col, bottom_left_row, object);
 			}
 		}
 		catch (const std::exception&)
 		{
-
 		}
 	}
+	imshow(this->filename, smaller_image);
 }
 
 #pragma region HELPER FUNCTIONS
 
-bool ImageWithBlueSignObjects::tryMatch(Mat image, AnnotatedImages& training_images, double hist_template, double template_threshold)
+string ImageWithBlueSignObjects::tryMatch(Mat image, AnnotatedImages& training_images, double hist_template, double template_threshold)
 {
 	vector<ImageWithObjects*> train_imgs = training_images.annotated_images;
 	for (size_t i = 0; i < train_imgs.size(); i++)
@@ -966,9 +980,9 @@ bool ImageWithBlueSignObjects::tryMatch(Mat image, AnnotatedImages& training_ima
 		cout << "Min Value = " << minVal << " Max value = " << maxVal << endl;
 
 		if (maxVal > template_threshold)
-			return true;
+			return train_imgs[i]->getObject(0)->getName();
 	}
-	return false;
+	return "";
 }
 
 double getAngle(Point a, Point b, Point c)

@@ -894,6 +894,7 @@ void ImageWithBlueSignObjects::LocateAndAddAllObjects(AnnotatedImages& training_
 	vector<RotatedRect> rectangles = GetRotatedBoxes(canny_image_blur, true, this->filename);
 }
 
+#pragma region HELPER FUNCTIONS
 vector<RotatedRect> ImageWithBlueSignObjects::GetRotatedBoxes(Mat image, bool isDrawBoxes = false, string name = "")
 {
 	vector<RotatedRect> result;
@@ -1031,6 +1032,7 @@ void ImageWithBlueSignObjects::ComputeHoughP(Mat image, Mat return_image)
 		line(return_image, Point(l[0], l[1]), Point(l[2], l[3]), Scalar(0, 0, 255), 3, LINE_AA);
 	}
 }
+#pragma endregion HELPER FUNCTIONS
 
 #define BAD_MATCHING_VALUE 1000000000.0;
 double ObjectAndLocation::compareObjects(ObjectAndLocation* otherObject)

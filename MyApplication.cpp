@@ -83,6 +83,7 @@ private:
 	vector<RotatedRect> GetRotatedBoxes(Mat image, bool isDrawBoxes, string name);
 	float euclideanDist(Point a, Point b);
 	void GetSquares(Mat image, vector<vector<Point>>& squares);
+	bool tryMatch(Mat image, AnnotatedImages& training_images, double hist_threshold, double template_threshold);
 };
 
 class ConfusionMatrix;
@@ -517,7 +518,7 @@ void MyApplication()
 	imwrite("AllGroundTruthObjectImages.jpg", image_of_all_ground_truth_objects);*/
 	ch = cv::waitKey(1);
 
-	AnnotatedImages unknownImages("Blue Signs/Smallest Testing");
+	AnnotatedImages unknownImages("Blue Signs/Smaller Testing");
 	unknownImages.LocateAndAddAllObjects(trainingImages);
 	FileStorage unknowns_file("BlueSignsTesting.xml", FileStorage::WRITE);
 	if (!unknowns_file.isOpened())
@@ -892,17 +893,82 @@ void ImageWithBlueSignObjects::LocateAndAddAllObjects(AnnotatedImages& training_
 	
 	Mat canny_image_blur = ComputeCanny(kmeans, true);
 	
-	vector<RotatedRect> rectangles = GetRotatedBoxes(canny_image_blur, true, this->filename);
+	vector<RotatedRect> rectangles = GetRotatedBoxes(canny_image_blur, false, this->filename);
 
 	for (size_t i = 0; i < rectangles.size(); i++)
 	{
 		Rect boundingBox = rectangles[i].boundingRect();
-		rectangle(smaller_image, boundingBox, Scalar(255, 0, 0), 2);
+		try
+		{
+			Mat object = smaller_image(boundingBox);
+
+			if (tryMatch(object, training_images, 0.4, 0.6))
+			{
+				imshow(this->filename + " i " + to_string(i), object);
+			}
+		}
+		catch (const std::exception&)
+		{
+
+		}
 	}
-	imshow(this->filename, smaller_image);
 }
 
 #pragma region HELPER FUNCTIONS
+
+bool ImageWithBlueSignObjects::tryMatch(Mat image, AnnotatedImages& training_images, double hist_template, double template_threshold)
+{
+	vector<ImageWithObjects*> train_imgs = training_images.annotated_images;
+	for (size_t i = 0; i < train_imgs.size(); i++)
+	{
+		Mat templ = train_imgs[i]->getObject(0)->getImage();
+		resize(templ, templ, image.size());
+
+		Mat image_hsv, templ_hsv, result;
+		cvtColor(image, image_hsv, COLOR_BGR2HSV);
+		cvtColor(templ, templ_hsv, COLOR_BGR2HSV);
+
+		int h_bins = 50, s_bins = 60;
+		int histSize[] = { h_bins, s_bins };
+		// hue varies from 0 to 179, saturation from 0 to 255
+		float h_ranges[] = { 0, 180 };
+		float s_ranges[] = { 0, 256 };
+		const float* ranges[] = { h_ranges, s_ranges };
+		// Use the 0-th and 1-st channels
+		int channels[] = { 0, 1 };
+
+		Mat image_hist, templ_hist;
+
+		calcHist(&image_hsv, 1, channels, Mat(), image_hist, 2, histSize, ranges, true, false);
+		normalize(image_hist, image_hist, 0, 1, NORM_MINMAX, -1, Mat());
+
+		calcHist(&templ_hsv, 1, channels, Mat(), templ_hist, 2, histSize, ranges, true, false);
+		normalize(templ_hist, templ_hist, 0, 1, NORM_MINMAX, -1, Mat());
+		
+		double comparison = compareHist(image_hist, templ_hist, HISTCMP_CORREL);
+
+		if (comparison < hist_template)
+			continue;
+
+		int result_cols = image.cols - templ.cols + 1;
+		int result_rows = image.rows- templ.rows + 1;
+		result.create(result_rows, result_cols, CV_32FC1);
+
+		matchTemplate(image, templ, result, TM_CCORR_NORMED);
+
+		double minVal; double maxVal; Point minLoc; Point maxLoc;
+		Point matchLoc;
+
+		minMaxLoc(result, &minVal, &maxVal, &minLoc, &maxLoc, Mat());
+
+		cout << "Min Value = " << minVal << " Max value = " << maxVal << endl;
+
+		if (maxVal > template_threshold)
+			return true;
+	}
+	return false;
+}
+
 double getAngle(Point a, Point b, Point c)
 {
 	double dx1 = a.x - c.x;

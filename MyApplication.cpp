@@ -82,6 +82,7 @@ private:
 	void ComputeHoughP(Mat image, Mat return_image);
 	vector<RotatedRect> GetRotatedBoxes(Mat image, bool isDrawBoxes, string name);
 	float euclideanDist(Point a, Point b);
+	void GetSquares(Mat image, vector<vector<Point>>& squares);
 };
 
 class ConfusionMatrix;
@@ -892,9 +893,78 @@ void ImageWithBlueSignObjects::LocateAndAddAllObjects(AnnotatedImages& training_
 	Mat canny_image_blur = ComputeCanny(kmeans, true);
 	
 	vector<RotatedRect> rectangles = GetRotatedBoxes(canny_image_blur, true, this->filename);
+
+	for (size_t i = 0; i < rectangles.size(); i++)
+	{
+		Rect boundingBox = rectangles[i].boundingRect();
+		rectangle(smaller_image, boundingBox, Scalar(255, 0, 0), 2);
+	}
+	imshow(this->filename, smaller_image);
 }
 
 #pragma region HELPER FUNCTIONS
+double getAngle(Point a, Point b, Point c)
+{
+	double dx1 = a.x - c.x;
+	double dy1 = a.y - c.y;
+	double dx2 = b.x - c.x;
+	double dy2 = b.y - c.y;
+	return (dx1 * dx2 + dy1 * dy2) / sqrt((dx1 * dx1 + dy1 * dy1) * (dx2 * dx2 + dy2 * dy2) + 1e-10);
+}
+
+void ImageWithBlueSignObjects::GetSquares(Mat image, vector<vector<Point>>& squares)
+{
+	Mat temp_image, image_gray(image.size(), CV_8U), edges;
+	image.copyTo(temp_image);
+	squares.clear();
+	vector<vector<Point>> contours;
+
+	for (int c = 0; c < 3; c++)
+	{
+		int ch[] = { c, 0 };
+		mixChannels(temp_image, image_gray, ch, 1);
+
+		for (size_t l = 0; l < 11; l++)
+		{
+			if (l == 0)
+			{
+				Canny(image_gray, edges, 0, 50, 5);
+
+				dilate(edges, edges, Mat(), Point(-1, -1));
+			}
+			else
+			{
+				threshold(image_gray, edges, (1 + l) * 255 / 11, 255, THRESH_BINARY);
+			}
+
+			findContours(edges, contours, RETR_LIST, CHAIN_APPROX_SIMPLE);
+
+			vector<Point> approx;
+
+			for (size_t i = 0; i < contours.size(); i++)
+			{
+				approxPolyDP(Mat(contours[i]), approx, arcLength(Mat(contours[i]), true) * 0.02, true);
+
+				if (approx.size() == 4/* && fabs(contourArea(Mat(approx))) > 1000*/ && isContourConvex(Mat(approx)))
+				{
+					double maxCosine = 0;
+
+					for (size_t j = 0; j < 5; j++)
+					{
+						double cosine = fabs(getAngle(approx[j % 4], approx[j - 2], approx[j - 1]));
+						maxCosine = MAX(maxCosine, cosine);
+					}
+
+					if (maxCosine < 0.3)
+					{
+						squares.push_back(approx);
+					}
+				}
+			}
+		}
+	}
+}
+
 vector<RotatedRect> ImageWithBlueSignObjects::GetRotatedBoxes(Mat image, bool isDrawBoxes = false, string name = "")
 {
 	vector<RotatedRect> result;
@@ -905,11 +975,17 @@ vector<RotatedRect> ImageWithBlueSignObjects::GetRotatedBoxes(Mat image, bool is
 	Mat drawing = Mat::zeros(image.size(), CV_8UC3);
 	RNG rng(12345);
 	Scalar color1 = Scalar(0, 100, 0);
+	vector<Point> approx;
 
 	for (int i = 0; i < contours.size(); i++)
 	{
 
 		drawContours(drawing, contours, i, color1, 1, 8, hierarchy, 0, cv::Point());
+
+		/*approxPolyDP(Mat(contours[i]), approx, arcLength(Mat(contours[i]), true) * 0.02, true);
+
+		if (approx.size() != 4)
+			continue;*/
 
 		Rect boundingBox = boundingRect(contours[i]);
 		RotatedRect rotatedBoundingBox = minAreaRect(contours[i]);
